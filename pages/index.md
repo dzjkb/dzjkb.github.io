@@ -2,9 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: list
+layout: Post
 permalink: /
 title: Dzjkb
+feedformat: row
 ---
 
 Hi! Welcome to my garden. Take a look around...
