@@ -5,7 +5,7 @@
 layout: Post
 permalink: /
 title: Dzjkb
-feedformat: row
+feedformat: card
 ---
 
 Hi! Welcome to my garden. Take a look around...
