@@ -1,8 +1,42 @@
 <div class="home-intro">
-    <div class="jumbo">{{site.heading}} </div>
+    <div class="home-title">Jakub Pieszczek</div>
+    <!-- <div class="home-sub-title" style="padding: 0px;"> Digital Product Designer </div> -->
+
     <div class="home-sub-text"> <h3>
-        Jekyll Garden is a markdown friendly theme lets you publish your Obsidian vault (or a subset of it) as a Jekyll static website. 
-        Check out the <a href="{{'/notes' | relative_url}}"> demo </a>, <a href="{{'/post/features' | relative_url}}"> features </a> and <a href="{{'/post/how-to' | relative_url}}"> how to</a>.
-        </h3> 
-</div> </div>
+        Hi! This is my digital garden - something between a blog and a personal wiki. Take a look around:
+    </h3>
+    </div>
+</div>
+
+<div class="home-notes">
+    <a href="{{'/posts' | relative_url}}">
+            <h3 class="home-sub-title arrow-link">
+                    <span class="text"> Latest Posts</span>
+                    <span class="arrow">See All &rarr;</span>
+            </h3>
+    </a>
+
+    <div class="home-wrapper">
+            {% assign posts = site.posts | where: 'category', 'post' | where: 'feed', 'show' | sort: 'date' | reverse %}
+            {% for post in posts limit: 5 %}
+            <div class="homelist-feed"> <a href="{{ post.url }}">{{ post.title }}</a></div>
+            {% endfor %}
+    </div>
+</div>
+
+<div class="home-notes">
+    <a href="{{'/notes' | relative_url}}">
+            <h3 class="home-sub-title arrow-link">
+                    <span class="text"> Latest Working Notes</span>
+                    <span class="arrow">See All &rarr;</span>
+            </h3>
+    </a>
+
+    <div class="home-wrapper">
+            {% assign notes = site.notes | where: 'category', 'notes' | where: 'feed', 'show' | sort: 'date' | reverse %}
+            {% for note in notes limit: 5 %}
+            <div class="homelist-feed"> <a href="{{ note.url }}">{{ note.title }}</a></div>
+            {% endfor %}
+    </div>
+</div>
 
