@@ -4,7 +4,5 @@
 
 layout: Post
 permalink: /
-title: Dzjkb
+title: Jakub Pieszczek
 ---
-
-Hi! Welcome to my garden. Take a look around...
