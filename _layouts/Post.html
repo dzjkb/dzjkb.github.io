@@ -91,7 +91,6 @@
 
                 <!--- Notes Feed Layout-->
                 {%- if page.permalink == "/notes" -%}
-                    <h6><a href="/">← Home</a></h6>
                         <div class="title-left">{{page.title}}</div>
                         {%- include Content.html -%}
                         {%- include Feed.html -%}
@@ -126,7 +125,6 @@
 
                 <!--- Post Feed Layout-->
                 {%- if page.permalink == "/posts" -%}
-                <h5 class="meta-title"><a href="/">← Home</a></h5>
                 <h5>{{page.title}}</h5>
                     {%- include Content.html -%}
                     {% for post in site.posts %}
