@@ -125,17 +125,17 @@
 
                 <!--- Post Feed Layout-->
                 {%- if page.permalink == "/posts" -%}
-                <h5>{{page.title}}</h5>
-                    {%- include Content.html -%}
-                    {% for post in site.posts %}
-                        <div class="list-feed"> 
-                        <a href="{{ site.baseurl }}{{post.url}}" style="text-decoration: none;display: flex;justify-content: space-between;flex-direction: row;width: 100%;">
-                            <div class="writinglist-title">{{post.title }}</div>
-                        </a>
-                        </div>
-                    {%- endfor -%}
+                    <div class="title-left">{{page.title}}</div>
+                        {%- include Content.html -%}
+                        {% for post in site.posts %}
+                            <div class="list-feed">
+                            <a href="{{ site.baseurl }}{{post.url}}" style="text-decoration: none;display: flex;justify-content: space-between;flex-direction: row;width: 100%;">
+                                <div class="writinglist-title">{{post.title }}</div>
+                            </a>
+                            </div>
+                        {%- endfor -%}
 
-                <ul>
+                    <ul>
 
                 {%- endif -%}
 
