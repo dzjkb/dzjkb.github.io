@@ -90,9 +90,9 @@
                 {%- endif -%}
 
                 <!--- Notes Feed Layout-->
-                {%- if page.feedformat -%}
-                    <h5><a href="/">← Home</a></h5>
-                        <div class="jumbo">{{page.title}}</div>
+                {%- if page.permalink == "/notes" -%}
+                    <h6><a href="/">← Home</a></h6>
+                        <div class="title-left">{{page.title}}</div>
                         {%- include Content.html -%}
                         {%- include Feed.html -%}
                 {%- endif -%}
