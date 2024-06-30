@@ -127,7 +127,7 @@
                 <!--- Post Feed Layout-->
                 {%- if page.permalink == "/posts" -%}
                 <h5 class="meta-title"><a href="/">← Home</a></h5>
-                <div class="jumbo">{{page.title}}</div>
+                <h5>{{page.title}}</h5>
                     {%- include Content.html -%}
                     {% for post in site.posts %}
                         <div class="list-feed"> 
