@@ -7,7 +7,7 @@
     </div>
 </div>
 
-<!-- <div class="home-notes">
+<div class="home-notes">
     <a href="{{'/posts' | relative_url}}">
             <h3 class="home-sub-title arrow-link">
                     <span class="text"> Latest Posts</span>
@@ -21,7 +21,7 @@
             <div class="homelist-feed"> <a href="{{ post.url }}">{{ post.title }}</a></div>
             {% endfor %}
     </div>
-</div> -->
+</div>
 
 <div class="home-notes">
     <a href="{{'/notes' | relative_url}}">
@@ -32,10 +32,10 @@
     </a>
 
     <div class="home-wrapper">
-            {% assign notes = site.notes | where: 'category', 'notes' | where: 'feed', 'show' | sort: 'date' | reverse %}
-            {% for note in notes limit: 5 %}
-            <div class="homelist-feed"> <a href="{{ note.url }}">{{ note.title }}</a></div>
-            {% endfor %}
+        {% assign notes = site.notes | where: 'category', 'notes' | where: 'feed', 'show' | sort: 'date' | reverse %}
+        {% for note in notes limit: 5 %}
+        <div class="homelist-feed"> <a href="{{ note.url }}">{{ note.title }}</a></div>
+        {% endfor %}
     </div>
 </div>
 
