@@ -105,7 +105,7 @@
                             {%- else -%}
                             <a onclick="window.location.assign('/');">
                             {%- endif -%}
-                                    <h5 class="meta-title">← BACK</h5>
+                                    ←
                             </a>
                         </div>
                     <!--- List type Note Layout-->
@@ -140,7 +140,7 @@
                 {%- endif -%}
 
                 <!--- Post Layout-->
-                {%- if page.content-type == "post"  -%}
+                {%- if page.content-type == "post" -%}
                         <div class="note-page-section">
                             <div>
                                 {%- if site.preferences.homepage.enabled -%}
@@ -148,7 +148,7 @@
                                 {%- else -%}
                                 <a onclick="window.location.assign('/');">
                                 {%- endif -%}
-                                        <h5 class="meta-title">← BACK</h5>
+                                        ←
                                 </a>
                             </div>
                         <h1>{{page.title}}</h1>
