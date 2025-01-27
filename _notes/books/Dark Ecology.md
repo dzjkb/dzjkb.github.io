@@ -1,11 +1,11 @@
 ---
 title: Dark Ecology
 feed: show
-date: 
+date: 01-11-2024
 category: notes
 tags:
   - book
-  - in_progress
+  - read
 ---
 this is going to be a big one
 I like it so far, but the style is very dense and confusing at times
