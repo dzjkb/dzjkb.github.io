@@ -2,7 +2,7 @@
 title: peru
 feed: show
 date: 26-01-2025
-categ: notes
+category: notes
 ---
 ok so
 ### packing list
@@ -49,9 +49,11 @@ ok so
 - ATMs
     - https://wise.com/gb/blog/atms-in-peru
     - Scotia bank no fees, others probably ~several dollars
+    - BCP 5$ fee, recognizes visa
+    - atm locator https://www.visa.com/locator/atm
 - don't leave baggage unattended, don't let people carry it, of course
 - avoid buses in mountain areas - like machu picchu - due to wet season and dangerous roads
-- negotiate prices (e.g. cuzco taxies should be 5zł to get anywhere)
+- negotiate prices (e.g. cuzco taxis should be 5zł to get anywhere)
 - watch out for local food yeah
 ### todos at places
 - Lima
