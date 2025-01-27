@@ -1,10 +1,11 @@
 ---
-title : Markdown Rendered
+title: markdown reference
 feed: show
-date : 01-02-2021
+date: 01-02-2021
 category: notes
 ---
- 
+(copied over from Jekyll Garden default setup)
+
 This page contains a quick reference to all markdown properties. 90% of this was part of the [Simple Jekyll](https://github.com/raghuveerdotnet/simply-jekyll) theme, which we forked to built this one. Great job, makers!
 
 By the way, how did you reach this page?  
@@ -134,7 +135,7 @@ Some text to show that the reference links can follow later.
 
 [I'm a relative reference to a repository file](../blob/master/LICENSE)
 
-[You can use numbers for reference-style link definitions][1]
+[You can use numbers for reference-style link definitions][1i]
 
 Or leave it empty and use the [link text itself].
 
@@ -237,7 +238,7 @@ For example,
 
 $$P(A|B) = \frac{P(B | A)\cdot P(A)}{P(B)}$$
 
-Please note that for a math block to be displayed correctly, it needs to be separated by an empty line, above and below. Besides, the pipe character | may conflict with markdown : it is recommended to use \vert instead.
+Please note that for a math block to be displayed correctly, it needs to be separated by an empty line, above and biwielow. Besides, the pipe character | may conflict with markdown : it is recommended to use \vert instead.
 
 {:#tables}
 ### Tables
