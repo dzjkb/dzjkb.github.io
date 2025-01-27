@@ -3,7 +3,7 @@ title: "Cracked: Why Psychiatry is doing more harm than good"
 author: James Davies
 date: 2024-09-14
 category: notes
-feed: show
+feed: hide
 tags:
   - book
   - read

@@ -1,6 +1,6 @@
 ---
 title: Acoustic Territories
-feed: show
+feed: hide
 category: notes
 date: 13-08-2024
 tags:

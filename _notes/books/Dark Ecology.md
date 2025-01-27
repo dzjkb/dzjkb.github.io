@@ -1,6 +1,6 @@
 ---
 title: Dark Ecology
-feed: show
+feed: hide
 date: 01-11-2024
 category: notes
 tags:

@@ -1,7 +1,7 @@
 ---
 title: Determined
 author: Robert M. Sapolsky
-feed: show
+feed: hide
 category: notes
 date: 2024-09-14
 tags:

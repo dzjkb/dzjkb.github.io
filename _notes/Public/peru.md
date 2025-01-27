@@ -5,7 +5,11 @@ date: 26-01-2025
 category: notes
 ---
 ok so
-### packing list
+## importante insurance info
+- nr polisy 460004035671
+- portal ergo hestia do zarządzania polisą https://polisaonline.ergohestia.pl/ login PESEL
+- alarmowy nr telefonu: +48 585 507 012
+## packing list
 - med stuff
 - clothes
     - mountain shoes
@@ -24,7 +28,7 @@ ok so
 - mosquito guard
 - laundry detergent
 - charger + usb-c and mini
-### things to buy/find/do
+## things to buy/find/do
 - [x] belt with hidden pocket
 - [x] one more phone - used?
     - wait got my old one ok lesgo, 2 burner phones should be enough
@@ -42,20 +46,23 @@ ok so
     - just take everything I have - bookings thru cc - take out more as needed
 - [x] decathlon - waterproof pants thingy + a proper poncho
 - [x] insurance
-### reading
+## reading
 - https://www.reddit.com/r/travel/comments/2o1sti/destination_of_the_week_peru/
 - https://www.reddit.com/r/travel/comments/1ckzpup/good_experiences_with_manu_jungle_tours_in_peru/
-### pro tips
+## pro tips
 - ATMs
     - https://wise.com/gb/blog/atms-in-peru
-    - Scotia bank no fees, others probably ~several dollars
-    - BCP 5$ fee, recognizes visa
+    - ~~Scotia bank no fees, others probably ~several dollars~~
+    - ~~BCP 5$ fee, recognizes visa, same with Scotia bank~~
     - atm locator https://www.visa.com/locator/atm
+    - sum1 [saying](https://www.reddit.com/r/PERU/comments/6bpofy/exchanging_currency_best_or_cheapest_atm_fees_as/) it's no fees in BCP and Scotia? suspicious thread though
+    - [ok so](https://www.reddit.com/r/PERU/comments/1992szd/insane_atm_fees_in_peru_for_international_cards/) "used to be BCP but not anymore in 2023, Banco de la Nacion only now"? and still scotiabank
+    - !! BN ATMs are called MultiRed, 2024 fees below ![sc](/assets/img/peru_atms.png)
 - don't leave baggage unattended, don't let people carry it, of course
 - avoid buses in mountain areas - like machu picchu - due to wet season and dangerous roads
 - negotiate prices (e.g. cuzco taxis should be 5zł to get anywhere)
 - watch out for local food yeah
-### todos at places
+## todos at places
 - Lima
 - Arequipa
 - Titicaca

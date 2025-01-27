@@ -2,7 +2,7 @@
 title: Człowiek w poszukiwaniu sensu
 author: Viktor E. Frankl
 category: notes
-feed: show
+feed: hide
 date: 2024-09-14
 tags:
   - book

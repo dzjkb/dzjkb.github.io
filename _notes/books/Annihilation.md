@@ -1,6 +1,6 @@
 ---
 title: Annihilation
-feed: show
+feed: hide
 date: 22-07-2024
 category: notes
 tags:

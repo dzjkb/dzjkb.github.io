@@ -1,6 +1,6 @@
 ---
 title: Hold me tight
-feed: show
+feed: hide
 date: 28-07-2024
 category: notes
 tags:

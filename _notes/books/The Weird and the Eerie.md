@@ -1,7 +1,7 @@
 ---
 title: The Weird and the Eerie
 author: Mark Fisher
-feed: show
+feed: hide
 date: 13-08-2024
 category: notes
 tags:
