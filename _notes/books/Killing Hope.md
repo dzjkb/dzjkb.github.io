@@ -4,8 +4,8 @@ feed: hide
 date: 22-07-2024
 category: notes
 tags:
-  - unread
   - book
+  - in_progress
 ---
 [Killing Hope (wiki)](https://en.wikipedia.org/wiki/Killing_Hope)
 Buy - ?

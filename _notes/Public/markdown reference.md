@@ -1,6 +1,6 @@
 ---
 title: markdown reference
-feed: show
+feed: hide
 date: 01-02-2021
 category: notes
 ---

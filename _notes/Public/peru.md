@@ -7,27 +7,40 @@ category: notes
 ok so
 ## importante insurance info
 - nr polisy 460004035671
-- portal ergo hestia do zarządzania polisą https://polisaonline.ergohestia.pl/ login PESEL
 - alarmowy nr telefonu: +48 585 507 012
+- pdf na gdrive
+- portal ergo hestia do zarządzania polisą https://polisaonline.ergohestia.pl/ login PESEL
 ## packing list
 - med stuff
+    - [ ] meds
+    - [ ] sth like nospa
 - clothes
-    - mountain shoes
-    - raincoat
-    - poncho
-    - underwear - like x6?
-    - socks like 10x
-    - tribord overpants
-    - swimming shorts
-    - shorts
+    - [x] mountain shoes
+    - [x] raincoat
+    - [x] poncho
+    - [x] underwear - like x6?
+    - [x] socks like 10x
+    - [x] tribord overpants
+    - [x] swimming shorts
+    - [x] shorts
+    - [x] hot weather shirts
+    - [x] tshirt
+    - [x] hats
 - sunscreen
-    - for the tat especially
+    - [ ] for the tat especially
 - toilette
-    - two? bottles of listerine
-    - waterpik
-- mosquito guard
-- laundry detergent
-- charger + usb-c and mini
+    - [ ] two? bottles of listerine
+    - [ ] waterpik
+    - [ ] toothbrush
+    - [ ] toothpaste
+- [x] mosquito guard
+- [x] laundry detergent
+- [ ] charger + usb-c and mini
+- [x] klapki
+- [x] hajs
+- [x] powerbank
+- [x] notesik
+- [x] headlight
 ## things to buy/find/do
 - [x] belt with hidden pocket
 - [x] one more phone - used?
@@ -40,7 +53,7 @@ ok so
 - [ ] backpack - is the deep green one enough?
     - has to be if we're doing cabin baggage for iberia, 56x40x25cm, <10kg
     - no camping and warm weather might mean it's actually not going to be so many things
-- [ ] cash - like 1k?
+- [x] cash - like 1k?
     - what are the bigger expected spending places?
     - jungle - that might require >1k in cash wops
     - just take everything I have - bookings thru cc - take out more as needed
@@ -62,8 +75,5 @@ ok so
 - avoid buses in mountain areas - like machu picchu - due to wet season and dangerous roads
 - negotiate prices (e.g. cuzco taxis should be 5zł to get anywhere)
 - watch out for local food yeah
-## todos at places
-- Lima
-- Arequipa
-- Titicaca
-- Cuzco
+## notes after
+amazing
