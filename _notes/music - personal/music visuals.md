@@ -1,4 +1,6 @@
-inspired by https://victortao.substack.com/p/song-pong, see [[music]]
+inspired by https://victortao.substack.com/p/song-pong
+play with programatic generative visuals
+touch designer + custom scripts for picking apart CV models of various sorts
 
 color coding notes
 https://chromatone.center/

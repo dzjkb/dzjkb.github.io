@@ -39,3 +39,9 @@ zajebiście
 - event text - what is noise (hałas?)
     - looking for things in the cracks
     - emphasizing the meaning, beauty, "ontological status"? of the things that the system doesn't acknowledge, and thus wants to eradicate
+
+### delulu/crux 2025-03
+**2025-03-05**
+- [ ] fix nz5 delay in sequence start
+- [ ] play through parts, recall settings and ideas
+- [ ] recall bridge chord progression

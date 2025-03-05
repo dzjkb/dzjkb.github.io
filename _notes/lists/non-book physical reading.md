@@ -1,4 +1,4 @@
-less involved stuff (as opposed to [[reading]]), physical (as opposed to [[clipped stuff]])
+less involved stuff (as opposed to [[reading]]), physical (as opposed to [[web reading]])
 
 ## to do
 - Glissando - Sound Design

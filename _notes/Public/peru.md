@@ -12,8 +12,8 @@ ok so
 - portal ergo hestia do zarządzania polisą https://polisaonline.ergohestia.pl/ login PESEL
 ## packing list
 - med stuff
-    - [ ] meds
-    - [ ] sth like nospa
+    - [x] meds
+    - [x] sth like nospa
 - clothes
     - [x] mountain shoes
     - [x] raincoat
@@ -27,15 +27,15 @@ ok so
     - [x] tshirt
     - [x] hats
 - sunscreen
-    - [ ] for the tat especially
+    - [x] for the tat especially
 - toilette
-    - [ ] two? bottles of listerine
-    - [ ] waterpik
-    - [ ] toothbrush
-    - [ ] toothpaste
+    - [x] two? bottles of listerine
+    - [x] waterpik
+    - [x] toothbrush
+    - [x] toothpaste
 - [x] mosquito guard
 - [x] laundry detergent
-- [ ] charger + usb-c and mini
+- [x] charger + usb-c and mini
 - [x] klapki
 - [x] hajs
 - [x] powerbank
@@ -50,7 +50,7 @@ ok so
     - empik? yeah something like [this](https://www.empik.com/etui-na-karty-dokumenty-portfel-meski-banknotowka-mlodziezowy-skora-eko,p1445145480,moda-p) looks legit enough, 13zł
     - allegro starts from 25-30zł
     - second hands! check puławska/madalińskiego
-- [ ] backpack - is the deep green one enough?
+- [x] backpack - is the deep green one enough?
     - has to be if we're doing cabin baggage for iberia, 56x40x25cm, <10kg
     - no camping and warm weather might mean it's actually not going to be so many things
 - [x] cash - like 1k?

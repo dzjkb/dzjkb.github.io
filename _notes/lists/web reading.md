@@ -30,6 +30,7 @@ random light things to read/watch from the internet like blogposts, articles, yt
 - [From word models to world models: translating from Natural Language to the probabilistic language of thought (arxiv)](https://arxiv.org/pdf/2306.12672)
 ### other
 - [raport mieszkaniowy MJN (pdf)](https://miastojestnasze.org/wp-content/uploads/2024/05/z-deszczu-pod-rynek-raport-mieszkaniowy-mjn-2.pdf)
+- https://foreignpolicy.com/2024/08/16/climate-change-central-banks-credit-guidance/
 ### masters
 oh boy my [[masters main]] (should this be a separate note? we'll find out)
 - learning meaningful representations of protein sequences
@@ -43,3 +44,6 @@ oh boy my [[masters main]] (should this be a separate note? we'll find out)
     - fascinating ideas of introducing noise (like dropout) or "regularization" (penalizing complexity) in systems like the electoral system, financial markets, education etc.
 - https://spikeartmagazine.com/articles/artist-talk-amnesia-scanner-freeka-tet-anne-imhof
     - amnesia scanner about their new album
+- https://www.jasonhickel.org/blog/2024/8/20/credit-guidance-how-we-achieve-degrowth
+    - ! more up to date stuff from Jason Hickel
+    - a goldmine
