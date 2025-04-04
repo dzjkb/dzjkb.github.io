@@ -14,6 +14,7 @@ random light things to read/watch from the internet like blogposts, articles, yt
 - [developing transformative tools for though (2019)](https://numinous.productions/ttft/)
 - [the marginalian](https://www.themarginalian.org/2024/10/22/marginalian-18/)
     - seems like an interesting blog (is it actually a blog?)
+- [Julia's poems on mały format](http://malyformat.com/2025/03/mozg-terrorystki/)
 ### cs
 * [how I program with LLMs](https://crawshaw.io/blog/programming-with-llms)
     - from the founder of tailscale, his other blogposts might be nice?
@@ -31,10 +32,6 @@ random light things to read/watch from the internet like blogposts, articles, yt
 ### other
 - [raport mieszkaniowy MJN (pdf)](https://miastojestnasze.org/wp-content/uploads/2024/05/z-deszczu-pod-rynek-raport-mieszkaniowy-mjn-2.pdf)
 - https://foreignpolicy.com/2024/08/16/climate-change-central-banks-credit-guidance/
-### masters
-oh boy my [[masters main]] (should this be a separate note? we'll find out)
-- learning meaningful representations of protein sequences
-- variational autoencoders with riemann brownian motion priors
 # indexes for further exploration
 - https://www.are.na/roberto-greco/unschooling
 # highlights (already read)
@@ -46,4 +43,4 @@ oh boy my [[masters main]] (should this be a separate note? we'll find out)
     - amnesia scanner about their new album
 - https://www.jasonhickel.org/blog/2024/8/20/credit-guidance-how-we-achieve-degrowth
     - ! more up to date stuff from Jason Hickel
-    - a goldmine
+    - a goldmine re: [[degrowth]]

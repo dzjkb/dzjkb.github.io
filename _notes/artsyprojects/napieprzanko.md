@@ -42,6 +42,6 @@ zajebiście
 
 ### delulu/crux 2025-03
 **2025-03-05**
-- [ ] fix nz5 delay in sequence start
-- [ ] play through parts, recall settings and ideas
-- [ ] recall bridge chord progression
+- [x] fix nz5 delay in sequence start
+- [x] play through parts, recall settings and ideas
+- [x] recall bridge chord progression

@@ -9,4 +9,4 @@ https://foreignpolicy.com/2024/08/16/climate-change-central-banks-credit-guidanc
 
 seems like a great idea - are there people who lobby for this? any movements in polish/european politics? REAL on an european level, what else?
 
-- [ ] read later - https://www.sciencedirect.com/science/article/pii/S0921800923002318
+- [ ] read later - https://www.sciencedirect.com/science/article/pii/s0921800923002318 (combining [[modern monetary theory]] and degrowth)

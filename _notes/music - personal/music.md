@@ -7,3 +7,5 @@ or in [[graphic scores]]?
 ## resources
 - a couple of books in [[reading]]
 - [oblique strategies](https://en.wikipedia.org/wiki/Oblique_Strategies)
+## project ideas
+- [ ] find a venue in Jazdów to continue symbiotic-style events?
