@@ -65,7 +65,7 @@ latent_size = 128
         v
    [ LeakyReLU ]
         v
-    [ Conv1D ] out_c = latent_size * 2, k = kernel_size, padding = (k-1//2,k//2)
+    [ Conv1D ] out_c = latent_size*2, k = kernel_size, padding = ((k-1)//2,k//2)
                L_out = L_in
 
 Encoder block w/ in_c, r:
@@ -90,9 +90,10 @@ all `Conv1D`s have weight norm applied
 ```
 kernel_size = 3
 
-    [ Conv1D ] out_c = capacity*2^4, k = kernel_size, L_out = L_in
+    [ Conv1D ] out_c = capacity*2^4, k = kernel_size, padding=(k-1//2, k//2)
+        |      L_out = L_in
         V
-[ Decoder block ] x 4 w/ ratios (4, 4, 4, 2)
+[ Decoder block ] x 4 w/ ratios (4, 4, 4, 2) (capacity /2, /4, /8, /16)
         v
    [ LeakyReLU ]
         v -------------------v
@@ -103,13 +104,14 @@ kernel_size = 3
 Decoder block w/ in_c, r:
        [ LeakyReLU ]
             v
-    [ Conv1D transposed ]
+    [ Conv1D transposed ] out_c = in_c//2, k = 2*r, stride = r, padding = r//2
+            |             L_out = L_in * r
             v
   [ Residual dilated unit ] x 3 for the first 3 layers, 2 for the fourth one
                             with (1, 3, 9) dilations
 
 Waveform module (with optional amplitude modulation):
-    [ Conv1D ] k = kernel_size*2+1,
+    [ Conv1D ] out_c = 2, k = kernel_size*2+1, padding = (k, k), L_out = L_in
          \--> (x, amplitude) -> x * sigmoid(amplitude)
 
 Noise generator:
@@ -130,9 +132,28 @@ r = 2 => L_out = floor((L_in - 3) / 2 + 1) = floor((L_in - 1) / 2)
 
 which after 4 blocks with (4, 4, 4, 2) ratios gives
 ```
-L_in = 44100 (x 2 channels)
-L_out = 344 (x 128 latent dimensions x 2 "outputs" (mean, var))
+L_in = 3000 (x 2 channels) (after 16-band decomposition)
+L_out = 23 (x 128 latent dimensions x 2 "outputs" (mean, var))
 ```
 
-hm the paper says its 23Hz not 344Hz?
-- [ ] what's the actual latent space rate?
+~~hm the paper says its 23Hz not 344Hz?~~
+- [x] what's the actual latent space rate?
+## upsampling factor of the decoder
+```
+padding = r//2
+L_out = (L_in - 1)*r - r + 2r = L_in*r
+```
+
+which after 4 blocks with (4, 4, 4, 2) ratios gives
+```
+L_in = 23 (x 128 latent dimensions)
+L_out = 23*128 = 2944
+```
+- [ ] why's the decoded rate 2944Hz not 3kHz - seems that the loss code expects the input/output to have the same rate (maybe `_pqmf_decode()` does some adjusting?)
+## dataset
+for dataset purposes RAVE uses:
+- `lmdb` - holding basically a name -> waveform mapping?
+    - with metadata probably
+- `udls` - an internal library providing an `AudioExample` class
+    - this is what's stored in the db
+    - contains the waveform, metadata etc.

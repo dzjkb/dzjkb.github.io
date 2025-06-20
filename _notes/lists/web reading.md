@@ -11,10 +11,10 @@ random light things to read/watch from the internet like blogposts, articles, yt
 ### other
 - [zettelkasten](https://zettelkasten.de/overview/)
     - done with the intro, not sure this is something I need?
-- [developing transformative tools for though (2019)](https://numinous.productions/ttft/)
+- [developing transformative tools for thought (2019)](https://numinous.productions/ttft/)
 - [the marginalian](https://www.themarginalian.org/2024/10/22/marginalian-18/)
     - seems like an interesting blog (is it actually a blog?)
-- [Julia's poems on mały format](http://malyformat.com/2025/03/mozg-terrorystki/)
+- (done) [Julia's poems on mały format](http://malyformat.com/2025/03/mozg-terrorystki/)
 ### cs
 * [how I program with LLMs](https://crawshaw.io/blog/programming-with-llms)
     - from the founder of tailscale, his other blogposts might be nice?
@@ -29,8 +29,11 @@ random light things to read/watch from the internet like blogposts, articles, yt
 - [a guide to scaling laws (medium)](https://medium.com/sage-ai/demystify-transformers-a-comprehensive-guide-to-scaling-laws-attention-mechanism-fine-tuning-fffb62fc2552)
     - related paper from OpenAI people - [Scaling Laws for Neural Language Models](https://arxiv.org/pdf/2001.08361)
 - [From word models to world models: translating from Natural Language to the probabilistic language of thought (arxiv)](https://arxiv.org/pdf/2306.12672)
+- [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html)
+    - fascinating stuff
+    - taken from [this HN thread](https://news.ycombinator.com/item?id=44041738)
 ### other
-- [raport mieszkaniowy MJN (pdf)](https://miastojestnasze.org/wp-content/uploads/2024/05/z-deszczu-pod-rynek-raport-mieszkaniowy-mjn-2.pdf)
+- (done) [raport mieszkaniowy MJN (pdf)](https://miastojestnasze.org/wp-content/uploads/2024/05/z-deszczu-pod-rynek-raport-mieszkaniowy-mjn-2.pdf)
 - https://foreignpolicy.com/2024/08/16/climate-change-central-banks-credit-guidance/
 # indexes for further exploration
 - https://www.are.na/roberto-greco/unschooling

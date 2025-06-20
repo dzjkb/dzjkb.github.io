@@ -8,4 +8,5 @@ or in [[graphic scores]]?
 - a couple of books in [[reading]]
 - [oblique strategies](https://en.wikipedia.org/wiki/Oblique_Strategies)
 ## project ideas
-- [ ] find a venue in Jazdów to continue symbiotic-style events?
+- [x] find a venue in Jazdów to continue symbiotic-style events?
+    - actually Krzysiu might restart państwomiasto ambient events, on hold then I guess
