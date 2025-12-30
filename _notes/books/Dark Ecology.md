@@ -14,3 +14,6 @@ going into poetry and aesthetical impressions rather than clear merit
 which does fit into the posited mental shift I guess
 ok sure but does that really mean you have to write it like that
 ah, maybe it's just the missing knowledge of modern philosophy
+
+ok good stuff
+important work

@@ -1,4 +1,0 @@
-ay
-
-
-[[masters reading]]

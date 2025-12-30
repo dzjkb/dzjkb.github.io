@@ -12,6 +12,8 @@
 - more references
 
 [WaveGlow: A Flow-based Generative Network for Speech Synthesis](https://arxiv.org/abs/1811.00002)
-
+### VAEs
+- [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
+    - 2014, one of the og papers?
 ### novelty / diversity metrics
 listed and summarized in [[diversity metrics]]

@@ -1,8 +1,8 @@
 ---
+title: samopomoc 18.06.2025
+date: 2025-06-18
 category: notes
 feed: hide
-date: 2025-06-18
-title: sampomoc 2025-06-18
 ---
 porządek obrad
 - uczestnicy: Kinga, JP, JIM, Maciek, Matt, Ola

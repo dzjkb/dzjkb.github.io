@@ -1,0 +1,1 @@
+https://thatbusinessofmeaning.substack.com/p/peter-macleod-on-trust-and-democracy

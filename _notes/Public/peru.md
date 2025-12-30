@@ -1,15 +1,17 @@
 ---
 title: peru
-feed: show
+feed: hide
 date: 26-01-2025
 category: notes
 ---
 ok so
+
 ## importante insurance info
 - nr polisy 460004035671
 - alarmowy nr telefonu: +48 585 507 012
 - pdf na gdrive
 - portal ergo hestia do zarządzania polisą https://polisaonline.ergohestia.pl/ login PESEL
+
 ## packing list
 - med stuff
     - [x] meds
@@ -59,9 +61,11 @@ ok so
     - just take everything I have - bookings thru cc - take out more as needed
 - [x] decathlon - waterproof pants thingy + a proper poncho
 - [x] insurance
+
 ## reading
 - https://www.reddit.com/r/travel/comments/2o1sti/destination_of_the_week_peru/
 - https://www.reddit.com/r/travel/comments/1ckzpup/good_experiences_with_manu_jungle_tours_in_peru/
+
 ## pro tips
 - ATMs
     - https://wise.com/gb/blog/atms-in-peru
@@ -75,5 +79,6 @@ ok so
 - avoid buses in mountain areas - like machu picchu - due to wet season and dangerous roads
 - negotiate prices (e.g. cuzco taxis should be 5zł to get anywhere)
 - watch out for local food yeah
+
 ## notes after
 amazing

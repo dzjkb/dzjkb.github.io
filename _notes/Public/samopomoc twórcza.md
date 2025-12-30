@@ -1,5 +1,5 @@
 ---
-feed: show
+feed: hide
 format: list
 date: 2025-02-23
 title: samopomoc twórcza

@@ -232,7 +232,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'Inter', sans-serif; }
+  font-family: 'Public Sans', sans-serif; }
 code,
 pre {
   -moz-osx-font-smoothing: auto;
@@ -640,13 +640,13 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   font-weight: 700 !important; }
 
 .is-family-primary {
-  font-family: "Inter" !important; }
+  font-family: "Public Sans" !important; }
 
 .is-family-secondary {
-  font-family: "Inter" !important; }
+  font-family: "Manjari" !important; }
 
 .is-family-sans-serif {
-  font-family: "Inter" !important; }
+  font-family: "Public Sans" !important; }
 
 .is-family-monospace {
   font-family: monospace !important; }

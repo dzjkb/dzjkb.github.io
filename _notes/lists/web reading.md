@@ -9,7 +9,7 @@ random light things to read/watch from the internet like blogposts, articles, yt
 - glenn mcdonald (formerly spotify)
     - has a book on music streaming/recommendation services?
 ### other
-- [zettelkasten](https://zettelkasten.de/overview/)
+- (done) [zettelkasten](https://zettelkasten.de/overview/)
     - done with the intro, not sure this is something I need?
 - [developing transformative tools for thought (2019)](https://numinous.productions/ttft/)
 - [the marginalian](https://www.themarginalian.org/2024/10/22/marginalian-18/)
@@ -18,6 +18,8 @@ random light things to read/watch from the internet like blogposts, articles, yt
 ### cs
 * [how I program with LLMs](https://crawshaw.io/blog/programming-with-llms)
     - from the founder of tailscale, his other blogposts might be nice?
+- https://specbranch.com/posts/fast-exp/
+    - some floating point-repr hacks
 # a bit more involved stuff
 ### cs
 - [NixOS](https://nixos.org/manual/nixos/stable/#sec-installation)
@@ -32,6 +34,12 @@ random light things to read/watch from the internet like blogposts, articles, yt
 - [On the Biology of a Large Language Model](https://transformer-circuits.pub/2025/attribution-graphs/biology.html)
     - fascinating stuff
     - taken from [this HN thread](https://news.ycombinator.com/item?id=44041738)
+- [Subclassing in Python Redux](https://hynek.me/articles/python-subclassing-redux/)
+    - generally composition-over-inheritance, but when can subclassing be ok?
+    - "strict specialization"
+- https://aza.moe/about blog
+### music
+- https://monoskop.org
 ### other
 - (done) [raport mieszkaniowy MJN (pdf)](https://miastojestnasze.org/wp-content/uploads/2024/05/z-deszczu-pod-rynek-raport-mieszkaniowy-mjn-2.pdf)
 - https://foreignpolicy.com/2024/08/16/climate-change-central-banks-credit-guidance/

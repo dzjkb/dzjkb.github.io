@@ -54,19 +54,19 @@ html[data-theme="dark"] {
 }
 
 :root {
-    --text-large: 18px;
-    --text-base: 16px;
-    --text-small: 14.5px;
-    --text-weight-bold: 600;
+    --text-large: 1.2rem;
+    --text-base: 1rem;
+    --text-small: 0.933rem;
+    --text-weight-bold: 700;
     --text-weight-normal: 400;
-    --text-leading-wide: 1.6em;
-    --text-leading-normal: 1.4em;
-    --text-leading-narrow: 1.2em;
+    --text-leading-wide: 1.5em;
+    --text-leading-normal: 1.3em;
+    --text-leading-narrow: 1.1em;
     --padding-normal: 1.2rem;
     --padding-broad: 2rem;
     --padding-thin: 0.6rem;
-    --font-main: 'Inter';
-    --font-sub: 'Newsreader';    
+    --font-main: 'Public Sans';
+    --font-sub: 'Manjari';    
 }
 
 /* 02. Typography */
@@ -80,7 +80,7 @@ h1 {
 h2, h3, h4, h5 {
     font-size: var(--text-large);
     line-height: var(--text-leading-normal);
-    font-weight: var(--text-weight-normal);
+    font-weight: var(--text-weight-bold);
     padding: var(--padding-normal) 0 var(--padding-thin) 0;
     color: var(--color-text-sub);
 }

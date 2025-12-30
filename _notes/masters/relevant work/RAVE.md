@@ -1,3 +1,4 @@
+2021 - Antoine (acids icram)
 these guys fr http://acids.ircam.fr/
 
 main repo - https://github.com/acids-ircam/RAVE/tree/master
@@ -14,9 +15,11 @@ with their own [pytorch version of ddsp](https://github.com/acids-ircam/ddsp_pyt
 - using noise synth from ddsp + wave and loudness subnets
 - wave subnet is just a fucking convolution? bro I swear
 - filtered noise is the only ddsp component
-- signal is split into **TODO** bands which brings the massive speedup
+- signal is split into 16 bands which brings the massive speedup
     - PQMF filters (**TODO** link)
     - each band is downsampled, hence the speedup
+    - 25x speedup
+    - increases the receptive field too
 
 **latent space**
 - sampled at 20Hz using a SampleRNN
@@ -30,6 +33,11 @@ with their own [pytorch version of ddsp](https://github.com/acids-ircam/ddsp_pyt
 - `n_out = 2` is for outputing 2 latent vectors - mean and logvar
 - looks like `n_channels == 1`? it's not set in any gin config
 - and `N_BANDS = 16` which are just represented as different channels for convolutions, which gives `data_size = 16`, so the input shape is `(L, data_size)`?
+- noted that using the (perceptual?) loss from [[MelGAN]] for the encoder gives worse (larger) latent space dimensionality
+- multiband decomposition based on [[Multi-band MelGAN]]
+
+**augmentations**
+- dequantization, random crop and allpass filters with random coefficient
 
 ## cached convolutions
 adapting fixed input length models to stream processing without retraining
@@ -149,7 +157,7 @@ which after 4 blocks with (4, 4, 4, 2) ratios gives
 L_in = 23 (x 128 latent dimensions)
 L_out = 23*128 = 2944
 ```
-- [ ] why's the decoded rate 2944Hz not 3kHz - seems that the loss code expects the input/output to have the same rate (maybe `_pqmf_decode()` does some adjusting?)
+- [x] why's the decoded rate 2944Hz not 3kHz - seems that the loss code expects the input/output to have the same rate (maybe `_pqmf_decode()` does some adjusting?)
 ## dataset
 for dataset purposes RAVE uses:
 - `lmdb` - holding basically a name -> waveform mapping?
@@ -157,3 +165,32 @@ for dataset purposes RAVE uses:
 - `udls` - an internal library providing an `AudioExample` class
     - this is what's stored in the db
     - contains the waveform, metadata etc.
+## training procedure
+![[Pasted image 20251119185826.png]]
+- dataset: 30h of string recordings
+- 90/10 train test split
+# goals/evaluation
+- [x] what are the goals/evaluation methods in RAVE?
+### experiments
+- ablations
+    - decomposition vs generation speed
+    - noise synth
+    - amplitude envelope
+    - adversarial fine-tuning
+- reconstruction - strings, voice (VCTK) - versus NSynth and SING
+- latent space compression (spectral distance)
+- timbre transfer (qualitative)
+- signal compression
+    - ?
+    - wavenet encoder what why?
+### evaluation methods
+**multiscale spectral loss**
+- or "spectral distance"
+
+**mean opinion score**
+- 33 audio professionals (mostly)
+- rating each sample 1-5
+    - wouldn't it be better to rank the samples?
+- 15 trials, each presenting reconstructions from 3 of the models
+# reproducing results
+use their CLI on graz/snares

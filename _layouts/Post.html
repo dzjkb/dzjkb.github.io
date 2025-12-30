@@ -31,9 +31,9 @@
 
 <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="Hiran Venugopalan" property="og:site_name" />
+    <meta content="Jakub Pieszcze" property="og:site_name" />
     <meta
-        content="Product and Type Designer | UI UX | Design Mentoring"
+        content="music | AI"
         property="og:description">
     <meta content="{{ site.url }}/about/" property="article:author">
     <meta property="og:image" content="../assets/img/OGImg.png">
@@ -99,7 +99,7 @@
                 <!--- Notes Layout-->
                 {%- if page.content-type == "notes" -%}
                     <div class="note-page-section">
-                        <div>
+                        <!-- <div>
                             {%- if site.preferences.homepage.enabled -%}
                             <a onclick="window.history.back();">
                             {%- else -%}
@@ -107,7 +107,7 @@
                             {%- endif -%}
                                     ←
                             </a>
-                        </div>
+                        </div> -->
                     <!--- List type Note Layout-->
                     {%- if page.format == "list" -%}
                     <style>
@@ -142,7 +142,7 @@
                 <!--- Post Layout-->
                 {%- if page.content-type == "post" -%}
                         <div class="note-page-section">
-                            <div>
+                            <!-- <div>
                                 {%- if site.preferences.homepage.enabled -%}
                                 <a onclick="window.history.back();">
                                 {%- else -%}
@@ -150,7 +150,7 @@
                                 {%- endif -%}
                                         ←
                                 </a>
-                            </div>
+                            </div> -->
                         <h1>{{page.title}}</h1>
                         {%- include Content.html -%}
                         {%- include Backlinks.html -%}

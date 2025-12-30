@@ -1,0 +1,39 @@
+{
+	"nodes":[
+		{"id":"6b4bff455b535624","type":"file","file":"masters/relevant work/WaveNet.md","x":-1760,"y":166,"width":440,"height":86},
+		{"id":"43585d399bce0b7e","type":"file","file":"masters/relevant work/RAVE.md","x":880,"y":363,"width":320,"height":86},
+		{"id":"fe68ba8057282ac5","type":"file","file":"masters/relevant work/SoundStream.md","x":880,"y":-6,"width":320,"height":86},
+		{"id":"ea899e750674781a","type":"file","file":"masters/relevant work/WaveGAN.md","x":-771,"y":106,"width":300,"height":86},
+		{"id":"aeb2d0972db3d633","type":"file","file":"masters/relevant work/NSynth.md","x":-1258,"y":560,"width":338,"height":86},
+		{"id":"6b8d791a58f0b24c","type":"file","file":"masters/relevant work/Tacotron 2.md","x":-771,"y":-20,"width":300,"height":85},
+		{"id":"5e3c9e8eefe2cfa3","type":"file","file":"masters/relevant work/SampleRNN.md","x":-1258,"y":800,"width":338,"height":86},
+		{"id":"cd7f944ff6c08279","type":"file","file":"masters/relevant work/Tacotron.md","x":-1258,"y":65,"width":338,"height":86},
+		{"id":"47abd0ba30e46e8d","type":"file","file":"masters/relevant work/WaveRNN.md","x":-771,"y":406,"width":300,"height":86},
+		{"id":"a60a9fb885fe0431","type":"file","file":"masters/relevant work/WaveGlow.md","x":-771,"y":263,"width":300,"height":86},
+		{"id":"b67587eb4e698223","type":"file","file":"masters/relevant work/SING.md","x":-771,"y":800,"width":331,"height":86},
+		{"id":"964e70a4b64a9833","type":"file","file":"masters/relevant work/EnCodec.md","x":1280,"y":-6,"width":340,"height":86},
+		{"id":"8248b23549d2eb91","type":"file","file":"masters/relevant work/RVQGAN.md","x":1740,"y":-6,"width":400,"height":86},
+		{"id":"d6fef6b340e69aec","type":"file","file":"masters/relevant work/musicLM.md","x":1740,"y":363,"width":400,"height":86},
+		{"id":"7cb7883a5d3f45f4","type":"file","file":"masters/relevant work/ddsp.md","x":320,"y":560,"width":320,"height":86},
+		{"id":"d6d16ed790569af4","type":"file","file":"masters/relevant work/MelGAN.md","x":-200,"y":220,"width":360,"height":86},
+		{"id":"692c2034fa6bb1dd","type":"file","file":"masters/relevant work/GANSynth.md","x":-240,"y":560,"width":400,"height":86},
+		{"id":"e286c61a62b56657","type":"file","file":"masters/relevant work/MelNet.md","x":-200,"y":800,"width":360,"height":86},
+		{"id":"91b88187f2cddc0b","type":"file","file":"masters/relevant work/Parallel WaveGan.md","x":320,"y":960,"width":320,"height":86},
+		{"id":"f07998c42d8494ba","x":320,"y":134,"width":320,"height":86,"type":"file","file":"masters/relevant work/Multi-band MelGAN.md"}
+	],
+	"edges":[
+		{"id":"ede199f406011e5c","fromNode":"692c2034fa6bb1dd","fromSide":"right","toNode":"d6d16ed790569af4","toSide":"left"},
+		{"id":"64b975aa97636e12","fromNode":"692c2034fa6bb1dd","fromSide":"right","toNode":"7cb7883a5d3f45f4","toSide":"left"},
+		{"id":"38c7f303ce1a3a80","fromNode":"aeb2d0972db3d633","fromSide":"right","toNode":"692c2034fa6bb1dd","toSide":"left"},
+		{"id":"a33788e4ae335c98","fromNode":"cd7f944ff6c08279","fromSide":"right","toNode":"6b8d791a58f0b24c","toSide":"left"},
+		{"id":"c205fee794106066","fromNode":"6b4bff455b535624","fromSide":"right","toNode":"aeb2d0972db3d633","toSide":"left"},
+		{"id":"31b3cb3c3c3f3c47","fromNode":"6b4bff455b535624","fromSide":"right","toNode":"cd7f944ff6c08279","toSide":"left"},
+		{"id":"1cb7724fec08ecca","fromNode":"ea899e750674781a","fromSide":"right","toNode":"d6d16ed790569af4","toSide":"left"},
+		{"id":"131e6c52b0e42a2e","fromNode":"7cb7883a5d3f45f4","fromSide":"right","toNode":"43585d399bce0b7e","toSide":"left"},
+		{"id":"ef85c057144013e8","fromNode":"fe68ba8057282ac5","fromSide":"right","toNode":"964e70a4b64a9833","toSide":"left"},
+		{"id":"473356466500fabc","fromNode":"964e70a4b64a9833","fromSide":"right","toNode":"8248b23549d2eb91","toSide":"left"},
+		{"id":"4ffc7135e4cb9562","fromNode":"d6d16ed790569af4","fromSide":"right","toNode":"f07998c42d8494ba","toSide":"left"},
+		{"id":"cab899b2fe775ae7","fromNode":"f07998c42d8494ba","fromSide":"right","toNode":"43585d399bce0b7e","toSide":"left"},
+		{"id":"700a1d224e49cb31","fromNode":"d6d16ed790569af4","fromSide":"right","toNode":"43585d399bce0b7e","toSide":"left"}
+	]
+}
