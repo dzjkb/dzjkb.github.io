@@ -36,3 +36,6 @@ https://stackoverflow.com/questions/72936848/how-do-you-add-gifs-to-html
 ## adding entries
 just keep them in the GH repo, csv or sth
 some sort of buckets in the future? maybe, but one entry is like kilobytes at most
+## further ideas
+- palestine help - get involved page
+- subsections, like https://iwencikiwwa.net/teatr

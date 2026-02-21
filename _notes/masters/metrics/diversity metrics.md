@@ -10,7 +10,7 @@ might have to come up with something myself
 
 shit I'm not sure there's anything other people could come up with than these distances
 ## related
-- [[musicLM]] has a "diversity" section on the [examples website](https://google-research.github.io/seanet/musiclm/examples/), but it's just qualitative evaluation of several genertaed examples with fixed tokens
+- [[MusicLM]] has a "diversity" section on the [examples website](https://google-research.github.io/seanet/musiclm/examples/), but it's just qualitative evaluation of several genertaed examples with fixed tokens
 
 **stuff from different domains**
 - [Adaptive input-image normalization for solving the mode collapse problem in GAN-based X-ray images](https://www.sciencedirect.com/science/article/abs/pii/S1746809425008444)

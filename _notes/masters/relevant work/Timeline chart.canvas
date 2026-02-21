@@ -13,13 +13,15 @@
 		{"id":"b67587eb4e698223","type":"file","file":"masters/relevant work/SING.md","x":-771,"y":800,"width":331,"height":86},
 		{"id":"964e70a4b64a9833","type":"file","file":"masters/relevant work/EnCodec.md","x":1280,"y":-6,"width":340,"height":86},
 		{"id":"8248b23549d2eb91","type":"file","file":"masters/relevant work/RVQGAN.md","x":1740,"y":-6,"width":400,"height":86},
-		{"id":"d6fef6b340e69aec","type":"file","file":"masters/relevant work/musicLM.md","x":1740,"y":363,"width":400,"height":86},
+		{"id":"d6fef6b340e69aec","type":"file","file":"masters/relevant work/MusicLM.md","x":1740,"y":363,"width":400,"height":86},
 		{"id":"7cb7883a5d3f45f4","type":"file","file":"masters/relevant work/ddsp.md","x":320,"y":560,"width":320,"height":86},
 		{"id":"d6d16ed790569af4","type":"file","file":"masters/relevant work/MelGAN.md","x":-200,"y":220,"width":360,"height":86},
 		{"id":"692c2034fa6bb1dd","type":"file","file":"masters/relevant work/GANSynth.md","x":-240,"y":560,"width":400,"height":86},
 		{"id":"e286c61a62b56657","type":"file","file":"masters/relevant work/MelNet.md","x":-200,"y":800,"width":360,"height":86},
-		{"id":"91b88187f2cddc0b","type":"file","file":"masters/relevant work/Parallel WaveGan.md","x":320,"y":960,"width":320,"height":86},
-		{"id":"f07998c42d8494ba","x":320,"y":134,"width":320,"height":86,"type":"file","file":"masters/relevant work/Multi-band MelGAN.md"}
+		{"id":"f07998c42d8494ba","type":"file","file":"masters/relevant work/Multi-band MelGAN.md","x":320,"y":134,"width":320,"height":86},
+		{"id":"91b88187f2cddc0b","type":"file","file":"masters/relevant work/Parallel WaveGan.md","x":320,"y":800,"width":320,"height":86},
+		{"id":"929260886bc6ce82","x":320,"y":1040,"width":320,"height":86,"type":"file","file":"masters/relevant work/DrumGAN.md"},
+		{"id":"978c14096f73165f","x":880,"y":1040,"width":320,"height":86,"type":"file","file":"masters/relevant work/Crash.md"}
 	],
 	"edges":[
 		{"id":"ede199f406011e5c","fromNode":"692c2034fa6bb1dd","fromSide":"right","toNode":"d6d16ed790569af4","toSide":"left"},

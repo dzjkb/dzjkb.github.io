@@ -15,6 +15,7 @@ random light things to read/watch from the internet like blogposts, articles, yt
 - [the marginalian](https://www.themarginalian.org/2024/10/22/marginalian-18/)
     - seems like an interesting blog (is it actually a blog?)
 - (done) [Julia's poems on mały format](http://malyformat.com/2025/03/mozg-terrorystki/)
+- https://www.k-h-n-k.com/
 ### cs
 * [how I program with LLMs](https://crawshaw.io/blog/programming-with-llms)
     - from the founder of tailscale, his other blogposts might be nice?
@@ -38,6 +39,7 @@ random light things to read/watch from the internet like blogposts, articles, yt
     - generally composition-over-inheritance, but when can subclassing be ok?
     - "strict specialization"
 - https://aza.moe/about blog
+- https://github.com/pageman/sutskever-30-implementations
 ### music
 - https://monoskop.org
 ### other

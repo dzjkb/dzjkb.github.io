@@ -32,8 +32,8 @@ variety of genres, including Jazz and Latin music.
 - "These anecdotal findings suggest that per-song FAD scores may be a useful tool to find outliers" - outliers => diversity???
 
 who uses FAD again and how do they use it?
-- [[musicLM]]
-- and that's it????
+- [[MusicLM]]
+- [[DrumGAN]]
 
 ok lesgo
 - [x] read the Microsoft paper on FAD adaptation, decide on implementation

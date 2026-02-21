@@ -33,3 +33,6 @@ but, well, maybe getting rich quick first is the way to go?
 ### Elevenlabs
 ### LeCun's lab
 don't think that's realistic unfortunately
+### Proton
+https://job-boards.eu.greenhouse.io/proton/jobs/4779869101
+idk, working on email filters?

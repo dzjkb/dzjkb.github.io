@@ -1,4 +1,4 @@
-# keyboard
+# (done) keyboard
 https://ergodox-ez.com/buy
 https://www.keychron.com/blogs/news/why-is-the-split-keyboard-good-for-you
 
@@ -38,7 +38,7 @@ https://www.moergo.com/ ok tf is this
 - ~1500 PLN
 
 oh shi https://kinesis-ergo.com/keyboards/advantage360/
-# mouse
+# (done) mouse
 https://superuser.com/questions/1705684/does-the-apple-magic-trackpad-2-work-on-linux
 # (done) headphones
 candidates:

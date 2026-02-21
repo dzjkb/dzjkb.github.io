@@ -1,4 +1,4 @@
-tasks from `masters/`:
+    tasks from `masters/`:
 ```dataview
 TASK
 WHERE !completed AND regexmatch("^masters/*", file.folder)

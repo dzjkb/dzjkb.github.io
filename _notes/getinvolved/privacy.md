@@ -1,3 +1,4 @@
+https://activistchecklist.org/
 # grapheneOS
 # Mullvad VPN + browser
 5$ per month

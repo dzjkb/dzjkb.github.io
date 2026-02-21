@@ -8,3 +8,5 @@ ok not so amazing
 there's a 45 day delay on disclosure
 https://www.reddit.com/r/investing/comments/18tdtxd/autopilot_app_has_anyone_done_it/
 and the [blog (substack)](https://www.autopilottracker.com/) very old :c 2023 last updates
+# real estate
+https://deweloperuch.pl/ nice

@@ -1,4 +1,4 @@
-J. Nistal (2020)
+2020 - J. Nistal
 [paper](https://arxiv.org/abs/2008.12073) (updated 2022?)
 [repo](https://github.com/SonyCSLParis/DrumGAN)
 
@@ -8,6 +8,12 @@ trains an unconditioned net for comparison which is kind of my case?
 # diversity discussion
 "Therefore, it is interesting to see that rand feats cause outputs which overall do not follow the distribution of the real data (i.e., high KID), but the individual outputs are still plausible percussion samples (i.e., low FAD)"
 - oh shit that's a diversity/novelty metric right there?
+# dataset
+info:
+- 300k samples
+- balanced across kicks, snares and cymbals
+- cut to 1s each
+- downsampled to 16kHz
 # goals/evaluation
 ### experiments
 - evaluating "controllability" (disentaglement?) based on methods from [this paper doing conditioned percussive sound generation too](https://arxiv.org/pdf/1911.11853)

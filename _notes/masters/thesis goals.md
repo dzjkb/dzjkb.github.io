@@ -30,7 +30,7 @@ and possible method changes to accomodate the new problem
 - Hecker
 - [x] prep a classical piano (debussy+chopin) dataset (moved from [[2025-06-25]])
 
-[[musicLM]] also lists extending previous methods to a wider music domain as a contribution
+[[MusicLM]] also lists extending previous methods to a wider music domain as a contribution
 ## secondary
 ### meaningful latent space
 any ways to actually shape it? try forcing a dimension to correspond to some abstract concepts (intensity? color? texture?) and see what happens?

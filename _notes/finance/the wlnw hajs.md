@@ -44,3 +44,4 @@ https://www.gov.pl/web/finanse/prognozy-makroekonomiczne-i-fiskalne
 ### declaration form
 https://poradnikprzedsiebiorcy.pl/-formularz-zgloszenia-otrzymania-darowizny-z-omowieniem
 - and [this article](https://poradnikprzedsiebiorcy.pl/-formularz-sd-z2-wzor-z-szerokim-omowieniem) which is kind of the same thing?
+- but it's worse somehow mmmkay

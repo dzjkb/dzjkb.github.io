@@ -34,6 +34,15 @@ alternative KL divergence (_free energy_) formulation is totally different, need
 2021 - "unified perspective" on the field
 "We place special emphasis on the fundamental principles of flow design, and discuss foundational topics such as expressive power and computational trade-offs"
 nice
+
+#### KLD implementaions
+option 1:
+```
+```
+
+option 2:
+```
+```
 ## works
 [[WaveGlow]]
 ohboy

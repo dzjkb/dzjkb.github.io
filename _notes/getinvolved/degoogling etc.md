@@ -59,6 +59,19 @@ just having it for new mail would be good enough for starters anyway
 https://account.proton.me/mail/signup?ref=mailhero - 4$/month
 # drive
 tough one, loads of options probably though
+
+https://jottacloud.com it is
+- has both archiving (like gdrive storage) and automatic backup functionality
+- with desktop apps for mac/win and a linux CLI!? even an AUR package
+- and a photos app to replace google photos, hell yes
+lesgo
+- https://docs.jottacloud.com/en/articles/1437238-archiving-files-and-folders-with-jottacloud-cli
+### moving
+- DL -> move all gdrive stuff into the archive
+- setup homedir linux backup
+- install photos app, do backup, remove everything from gphotos
+    - gphotos has stuff I don't longer have on my phone though
+    - would need to re-download them to upload them again? huh
 # phone
 graphene OS
 main problems:
