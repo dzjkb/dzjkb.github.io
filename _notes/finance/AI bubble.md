@@ -33,3 +33,6 @@ Burry's arguments
 - overstated revenue (https://www.wheresyoured.at/oai_docs/)
     - changed GPU depreciation
 - massive GPU buying backed by only debt and VC financing, since the profits are still negligble (and definitely not enough to cover the expenses so far)
+
+April 2026
+- [50% of AI datacenters have quietly been cancelled or delayed](https://www.youtube.com/watch?v=w-DVTHH1ux8)

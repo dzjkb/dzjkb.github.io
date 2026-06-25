@@ -1,7 +1,7 @@
 see [mean opinion score](https://en.wikipedia.org/wiki/Mean_opinion_score)
 literally used by everyone
 ## general mechanism
-- [ ] MOS general algorithm/mechanism
+- [ ] MOS general algorithm/mechanism [frozen:: true]
 ## variations
 - what's CMOS? (comparative MOS)
 ## related tooling

@@ -1,3 +1,8 @@
+---
+tags:
+  - project
+---
+
 # (done) spotify -> tidal
 https://zoemcpherson.xyz/MOVING
 https://www.tunemymusic.com/ for moving playlists
@@ -68,16 +73,18 @@ lesgo
 - https://docs.jottacloud.com/en/articles/1437238-archiving-files-and-folders-with-jottacloud-cli
 ### moving
 - DL -> move all gdrive stuff into the archive
-- setup homedir linux backup
+    - it's mostly photos anyway so
+- (done) setup homedir and /etc linux backup
 - install photos app, do backup, remove everything from gphotos
     - gphotos has stuff I don't longer have on my phone though
     - would need to re-download them to upload them again? huh
+    - and removing stuff from gphotos needs to be done manually by shift-selecting everything, jfc
 # phone
 graphene OS
 main problems:
 - many unavailable apps
 - possible to sandbox play services -> use stuff like maps though !? lesgo
-separate note at [[privacy]]
+separate note at [[privacy]] or [[graphene]]
 
 oh shit maybe there are some cell provider promos with pixels for a złotówka?
 https://komorkomat.pl/telefon-za-zlotowke/ nope

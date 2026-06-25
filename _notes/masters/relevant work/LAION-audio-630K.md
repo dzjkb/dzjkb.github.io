@@ -50,3 +50,6 @@ need their CLI I guess
 right, downloading
 `HF_TOKEN=`
 ok done : o
+## processing
+semantic filtering with LLMs - use ~~`glm-4.7-flash`~~ `qwen2.5:1.5b` from an ollama server
+see `laion630k.ipynb`

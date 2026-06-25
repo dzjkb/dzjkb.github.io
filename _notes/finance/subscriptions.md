@@ -17,15 +17,14 @@ total = **2754.30**
 | greenpeace         | 20           |
 | pogoń pyton        | 100          |
 | MJN                | 35           |
-| NYT                | 8.63         |
 | Google One         | 8.99         |
 | Spotify            | 5            |
 | Tidal              | 8            |
-| Kagi               | ~93.5        |
+| Kagi               | ~113         |
 | RYM                | 6.15         |
 | Ostatnie Pokolenie | 10           |
 | Multisport         | 69.99        |
 | Hasanabi twitch    | ~18          |
 | Jottacloud         | ~24.21       |
-total = **424.35**
+total = **436.22**
 quite a bit, eh, but I though it might be worse

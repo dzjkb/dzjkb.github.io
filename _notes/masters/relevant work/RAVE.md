@@ -169,6 +169,8 @@ for dataset purposes RAVE uses:
 ![[Pasted image 20251119185826.png]]
 - dataset: 30h of string recordings
 - 90/10 train test split
+# prior model
+**note:** trained on only top N latent dimensions based on either a specified value or _fidelity_, meaning what percentage of explained variance do we want
 # goals/evaluation
 - [x] what are the goals/evaluation methods in RAVE?
 ### experiments
@@ -193,4 +195,54 @@ for dataset purposes RAVE uses:
     - wouldn't it be better to rank the samples?
 - 15 trials, each presenting reconstructions from 3 of the models
 # reproducing results
-use their CLI on graz/snares
+a note about the [[rave valid signal crop]]
+
+step by step:
+```
+pip install -e RAVE
+
+rave preprocess --input_path /home/ubuntu/storydz/data/piano/graz_mini_train --output_path ./graz_ds/graz_mini_train --channels 2 --sampling_rate 48000 --num_signal 72000
+
+rave train --config configs/yazda.gin --db_path /home/ubuntu/rave_training/graz_ds/graz_mini_train --out_path /home/ubuntu/rave_training/graz_v0 --name graz_v0 --channels 2 --workers 4 --val_every 4000 --max_steps 150000
+```
+
+`--input_path` is a directory of `wav`s, `--output_path` will be a directory with dbs inside
+
+`yazda.gin` looks like this:
+```
+from __gin__ import dynamic_registration
+
+include "configs/v2.gin"
+include "configs/descript_discriminator.gin"
+
+import rave
+from rave import core
+
+SAMPLING_RATE = 48000
+
+rave.BetaWarmupCallback:
+    initial_value = 1e-6
+    target_value = 5e-2
+    warmup_len = 20000
+
+core.MultiScaleSTFT:
+    sample_rate = %SAMPLING_RATE
+
+rave.RAVE:
+    sampling_rate = %SAMPLING_RATE
+    phase_1_duration = 20000
+
+```
+
+same bit crushed sound for phase1, that's reassuring
+ok very similar results that's nice
+
+prior training:
+```
+rave train_prior --model /media/Data/jp_dir/sounds/rave_training/vctk_words_v0_0b2e4cd2e9/version_1 --db_path /media/Data/jp_dir/sounds/vctk_rave --out_path /media/Data/jp_dir/sounds/rave_training/vctk_priors --gpu 1 --name vctk_words --workers 4 --val_every 4000
+```
+do I need `--n_signal 131072`?
+need to switch prior config to `sr=48000` and add `latent_size=128`
+
+more comparable prior generation:
+- [ ] train the prior on the same 1s clips used for training rather than continuous audio [frozen:: true]

@@ -1,4 +1,6 @@
-something that basically encompasses all of the other ideas - [[ustawy]], [[polishfunding]], [[political spending]]
+something that basically encompasses all of the other ideas - [[ustawy]], [[polishfunding, lobbies]], [[political spending]]
+
+https://ewybory.eu/sondaze/
 # inspirations
 - https://integrityindex.us
 - that blokes polish politics finance track https://skrotpolityczny.pl
@@ -10,3 +12,6 @@ https://www.reddit.com/r/investing/comments/18tdtxd/autopilot_app_has_anyone_don
 and the [blog (substack)](https://www.autopilottracker.com/) very old :c 2023 last updates
 # real estate
 https://deweloperuch.pl/ nice
+# koryto
+https://koryta.pl/
+https://kazdymusigdziespracowac.pl/

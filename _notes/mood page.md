@@ -1,8 +1,8 @@
 iwhat are the vibes today?
 
-| if       | then                                                                                    |
-| -------- | --------------------------------------------------------------------------------------- |
+| if       | then                                                                                  |
+| -------- | ------------------------------------------------------------------------------------- |
 | zzz      | [[watching]], [[web reading]], traveling, [[shopping]], [[non-book physical reading]] |
-| think    | [[reading]]                                                                             |
-| creative | [[writing]], [[music]]                                                                  |
-| do       | [[masters main]]                                                                             |
+| think    | [[reading]]                                                                           |
+| creative | [[writing]], [[music]]                                                                |
+| do       | [[masters main]]                                                                      |

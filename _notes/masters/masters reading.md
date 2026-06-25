@@ -1,3 +1,4 @@
+deprecated note really
 ### general
 [Learning meaningful representations for protein sequences](https://www.researchgate.net/publication/359819766_Learning_meaningful_representations_of_protein_sequences)
 - why is this here again?
@@ -15,5 +16,3 @@
 ### VAEs
 - [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082)
     - 2014, one of the og papers?
-### novelty / diversity metrics
-listed and summarized in [[diversity metrics]]

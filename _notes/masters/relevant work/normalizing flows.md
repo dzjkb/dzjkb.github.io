@@ -9,6 +9,7 @@ more expressive latent space -> better reproduction/unconditional generation
 - isn't this just equivalent to more capacity? the flow could be just learned by the decoder
 
 #### [Variational Inference with Normalizing Flows](https://arxiv.org/pdf/1505.05770)
+2016
 ```
 It is one of these limitations, the choice of
 posterior approximation, that we address in this paper.
@@ -24,7 +25,7 @@ show that in the asymptotic regime, the space of solutions
 is rich enough to contain the true posterior distribution
 ```
 right that's exactly what I want, no?
-- [ ] Variational Inference with normalizing flows - what class of flows to approximate the posteriors is this?
+- [ ] Variational Inference with normalizing flows - what class of flows to approximate the posteriors is this? [frozen:: true]
 
 DLGMs - generalizations of models with latent variables, apparently [[VAE]]s can be thought of as DLGMS 
 
@@ -133,9 +134,9 @@ KLD weight experiment would suggest that even if we set it low (i.e. optimizing 
 ## other reading
 - [x] read [Conditional Variational Autoencoder with Adversarial Learning for End-to-End TTS - VITS (2021)](https://arxiv.org/pdf/2106.06103)
 - [x] read [Naturalspeech: End-to-end text to speech synthesis with human-level quality](https://arxiv.org/abs/2205.04421)
-- [ ] [Improving Variational Inference with Inverse Autoregressive Flow](https://arxiv.org/abs/1606.04934)
+- [ ] [Improving Variational Inference with Inverse Autoregressive Flow](https://arxiv.org/abs/1606.04934) [frozen:: true]
     - idk this is an old one
-- [ ] [Learning Energy-based Variational Latent Prior for VAEs](https://arxiv.org/html/2510.00260)
+- [x] [Learning Energy-based Variational Latent Prior for VAEs](https://arxiv.org/html/2510.00260) [frozen:: true]
 - [x] [Variational Autoencoders with Normalizing Flow Decoders (2020)](https://ar5iv.labs.arxiv.org/html/2004.05617)
     - https://arxiv.org/pdf/2004.05617
 - [x] FloWaveNet (2019)

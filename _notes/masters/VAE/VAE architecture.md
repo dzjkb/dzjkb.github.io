@@ -50,7 +50,7 @@ which seems quite reasonable to recognize periodic patterns, the period seem sma
 **MRSD** does STFT (`[2048, 1024, 512]` frame sizes), splits into 5 bands and runs the same stack of convolutions on each one -> concat and the last conv on the whole thing
 ### latent space
 instead of a 23Hz time series of latents - one latent vector
-### normalizing flows
+### normalizing flowsiso_gaussian
 using [[Real NVP]]
 described in [[2025-12-24]], [[2025-12-28]]
 # Training
@@ -70,6 +70,15 @@ choices
     - it's adding random noise less at more than 16bit resolution
     - typical learning noise I guess? sure
 also something implemented but turned off in `v3` is random pitch shift, good augmentation for sure
+### STFT loss
+
+notes:
+- l1 distance with no mel scale emphasizes high frequencies, mel emphasizes lower ones though
+- short windows are more about time resolution/events, longer about frequency distribution
+- the eps in `log(|STFT(x)| + eps)` sets the noise floor under which the loss doesn't push further - important for some data types
+
+- [ ] mix mel+linear stft log magnitude distances to control frequency emphasis
+    - note: this might impact speed, verify it's not too expensive
 # Improvements TODO
 - [x] weight norm (moved from [[2025-07-06]])
     - as proposed in [[MelGAN]]
@@ -81,7 +90,7 @@ also something implemented but turned off in `v3` is random pitch shift, good au
 - [x] add pqmf decomposition
 - [x] add the snake activation function
 - [x] add validation loss logging
-- [ ] add stereo audio validation logging to the local fs
+- [ ] add stereo audio validation logging to the local fs [frozen:: true]
     - or maybe tensorboard supports logging arbitrary files?
 - [x] reduce `z` to single latent vector
 - [x] add normalizing flows to both posterior and prior distributions

@@ -35,7 +35,9 @@ who uses FAD again and how do they use it?
 - [[MusicLM]]
 - [[DrumGAN]]
 
+note: FAD seems to be sensitive to the number of examples?
+
 ok lesgo
 - [x] read the Microsoft paper on FAD adaptation, decide on implementation
-- decide if we want to use this at all?
-- decide on reference set + embeddings
+- [x] decide if we want to use this at all?
+- [x] decide on reference set + embeddings

@@ -45,3 +45,25 @@ https://www.gov.pl/web/finanse/prognozy-makroekonomiczne-i-fiskalne
 https://poradnikprzedsiebiorcy.pl/-formularz-zgloszenia-otrzymania-darowizny-z-omowieniem
 - and [this article](https://poradnikprzedsiebiorcy.pl/-formularz-sd-z2-wzor-z-szerokim-omowieniem) which is kind of the same thing?
 - but it's worse somehow mmmkay
+# Tomek loan return
+ok so Tomek got 375k from allegedly my cash, wants to return
+options:
+1. take mortgage, return everything at once
+2. return monthly with interest as if I were the bank giving a mortgage
+3. return monthly up to some point, at which take mortgage for my flat
+#### mortgage
+why have a middle-man
+
+terms:
+- 17 years
+- first 2 years 2.2k/mo, next 15 years 3k/mo
+- 375 000 + 241 833.52 = 616 833.52 in total (effective ~3% annual compound interest, nice)
+#### mortgage-like monthly return
+same conditions as mortgage?
+### conclusion
+ok so the middle-man actually makes sense; why?
+because mortgages are very low-risk for banks, which enables good terms
+in practice this is taking a mortgage to invest it into bonds/stocks
+I wouldn't be able to do that normally
+# investing
+see [[portfolio]]

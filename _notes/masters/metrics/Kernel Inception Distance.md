@@ -25,6 +25,6 @@ unbiased estimator, better for small sample sizes
 no gaussian assumption
 sensitivity to outliers (if the drumgan kernel - IMQ - is used)
 ## implementation
-ok so what [[DrumGAN]] does is iterate in batches of 5000 over real/fake data until fake data runs out
+~~ok so what [[DrumGAN]] does is iterate in batches of 5000 over real/fake data until fake data runs out
 so potentially not looking at all of the real data?
-wtf
+wtf~~ probably a RAM optimization, omitting that

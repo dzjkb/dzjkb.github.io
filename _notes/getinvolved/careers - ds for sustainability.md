@@ -1,3 +1,7 @@
+---
+tags:
+  - project
+---
 where do I even search for this shit
 - ~~[sustainable development conference](https://iser.org.in/conf/index.php?id=2905777)~~
     - why are all the speakers indian
@@ -21,6 +25,8 @@ where do I even search for this shit
 - https://www.idealist.org/en
 - https://www.datakind.org/
 - zero hunger lab ?
+- https://european-alternatives.eu
+    - poland will eventually get to replicating critical software, that would be nice
 ### ZN
 - not sure they have DS openings, wouldn't hurt to try anyway
 - [contact - product innovation data/ai](https://careers.zeronorth.com/connect?department=product-innovation-data-ai)
@@ -33,6 +39,7 @@ but, well, maybe getting rich quick first is the way to go?
 ### Elevenlabs
 ### LeCun's lab
 don't think that's realistic unfortunately
+https://amilabs.xyz/
 ### Proton
 https://job-boards.eu.greenhouse.io/proton/jobs/4779869101
 idk, working on email filters?

@@ -1,10 +1,14 @@
 multiscale spectral loss
 
 [[Frechet Audio Distance]]
-- eh idk, maybe if we choose a legit reference set?
-- does this turn to like the diversity thing but opposite?
-- basically - how similar is the sample to the reference set?
-- but wait I can't use this to evaluate reconstruction since the generated samples will, by definition, be close to the reference (train) set
+- also measures diversity implicitly
+- basically fitting a gaussian to target/reference sets and comparing mean/covariance
+- meh
+
+[[Kernel Inception Distance]]
+- also measures diversity implicitly
+- maximum mean discrepancy between point clouds
+- better
 
 [[Mean Opinion Score]]
 - used by [[MelGAN]]
@@ -22,3 +26,9 @@ multiscale spectral loss
 
 ABX similarity tf?
 - like a MOS but similarity to some reference I think?
+## notes
+difference between FAD and KID:
+- FAD is biased, KID is not
+- FAD relies on the assumption that points are from a Gaussian distribution, can be fooled by weird shapes
+- KID more closely compares the actual shapes of the point clouds
+- self note: KID seems to generally be better, but report both for completeness/reference to previous work
