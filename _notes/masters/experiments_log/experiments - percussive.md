@@ -1,9 +1,4 @@
 # percussive2
-
-| idx | capacity | latent size | time | train recon loss | val recon loss |
-| --- | -------- | ----------- | ---- | ---------------- | -------------- |
-| 1   | 96       | 256         |      |                  |                |
-comments
 - #0 (`v1` config, `version_0` logdir)
     - the mb loss is decreasing while recon loss is 2x higher and oscillating, that's interesting, looks like mode collapse tho fml
     - ok not mode collapse actually, it's learning something, started NaNing though shit
@@ -53,6 +48,7 @@ comments
     - ok maybe it's not _that_ much of a difference compared to no-NF, but still, NF seems to be degrading rather than improving this
 - #3 (`nf_v1` config, `version_3` logdir)
     - 200k latent warmup steps `1e-6` -> `2e-4`; fm loss `40.0`
+    - ok idk seems reasonable, proceed with evals
 # eval metrics
 #### eval1
 
@@ -60,7 +56,9 @@ comments
 | -------- | -------------- | ------ | ------ | ------- |
 | **self** | **comparison** | 0.0000 | 0.0000 | 21.6521 |
 | no-NF    | reconstruction | 0.0045 | 0.1569 | 15.2375 |
-| NF       | reconstruction |        |        |         |
+| NF       | reconstruction | 0.0040 | 0.1271 | 15.2508 |
+| RAVE     |                |        |        |         |
 | no-NF    | unconditional  | 0.0537 | 0.8103 | 10.0454 |
-| NF       | unconditional  |        |        |         |
-| NF+prior | unconditional  |        |        |         |
+| NF       | unconditional  | 0.0504 | 0.7732 | 10.2943 |
+| RAVE     |                |        |        |         |
+| NF+prior | unconditional  | 0.0180 | 0.3539 | 9.7582  |

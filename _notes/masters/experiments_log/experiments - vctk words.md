@@ -1,16 +1,6 @@
 experiments on the [[VCTK]] dataset
 # experiments comparison
 ## standard
-
-| idx | capacity | latent size | strides | time      | train recon loss | val recon loss |
-| --- | -------- | ----------- | ------- | --------- | ---------------- | -------------- |
-| 1   | 96       | 256         | rave    | ~4.5 days | 4.077            | 22.06          |
-| 2   | 96       | 256         | rave    | ~4h       | too high         | too high       |
-| 3   | 96       | 256         | rave    | ~14h      | 4.281            | 22.39          |
-| 4   | 96       | 256         | rave    |           |                  |                |
-| 7/8 | 80/96    | 512         | 4-4-4-4 | 3 days    | ~4.6 (4.0)       | 22.47          |
-| 9   | 128/153  | 256         | 4-4-4-4 |           |                  |                |
-comments
 - #1 (logdir `version_1`)
     - maybe the lr is too small?
     - but the discriminator loss is slowly starting to go up instead of down, which is a very good signal
@@ -137,8 +127,9 @@ comments
     - ok first tries, this goes quick af; no problem fitting the prior, the random test/val split seems useless but w/e
 # latent space analysis
 # eval metrics
-#### eval1
+
 no-NF: `version_14`, NF: `version_8`, reference set: `vctk_words_v2/audio_val`
+CLAP embeddings using `music_audioset_epoch_15_esc_90.14.pt`
 
 | model         | mode           | KID    | FAD    | Vendi  |
 | ------------- | -------------- | ------ | ------ | ------ |
@@ -151,6 +142,20 @@ no-NF: `version_14`, NF: `version_8`, reference set: `vctk_words_v2/audio_val`
 | RAVE+prior3M  | unconditional  | 0.0670 | 0.6852 | 4.0574 |
 | NF+prior      | unconditional  | 0.0138 | 0.1673 | 6.2118 |
 | **self**      | **comparison** | 0.0000 | 0.0000 | 5.0779 |
+
+same but CLAP using `music_speech_epoch_15_esc_89.25.pt` and only the 3M rave prior:
+
+| model      | mode           | KID    | FAD     | Vendi  |
+| ---------- | -------------- | ------ | ------- | ------ |
+| no-NF      | reconstruction | 0.0015 | 0.0248  | 5.9449 |
+| NF         | reconstruction | 0.0015 | 0.0247  | 6.1620 |
+| RAVE       | reconstruction | 0.0017 | 0.0268  | 5.9428 |
+| no-NF      | unconditional  | 0.0534 | 0.5886  | 3.9058 |
+| NF         | unconditional  | 0.0549 | 0.6049  | 3.5694 |
+| RAVE+prior | unconditional  | 0.0535 | 0.5804  | 4.3253 |
+| NF+prior   | unconditional  | 0.0115 | 0.1491  | 5.6436 |
+| **self**   | **comparison** | 0.0000 | -0.0001 | 6.1212 |
+
 parameter counts:
 
 | model                         | params |
@@ -161,3 +166,9 @@ parameter counts:
 | RAVE (prior20M)               | 19.8M  |
 | RAVE (prior3M)                | 3.0M   |
 | NF prior                      | 988K   |
+
+| model    | gilbo                         |
+| -------- | ----------------------------- |
+| no-NF    | 115.9395 nats (167.2653 bits) |
+| NF       | 130.1579 nats (187.7782 bits) |
+| NF+prior | 107.5000 nats (155.0897 bits) |

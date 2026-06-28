@@ -169,6 +169,20 @@ for dataset purposes RAVE uses:
 ![[Pasted image 20251119185826.png]]
 - dataset: 30h of string recordings
 - 90/10 train test split
+## latent space compactness
+how do we find the most informative parts of the latent space?
+"range and null space estimation" - 5th page of the paper
+SVD and shit, but in practice it's: (taken from `validation_epoch_end`)
+```
+latent_mean = Z.mean(0)
+pca_fid = PCA(Z.shape[-1], random_state=RANDOM_STATE).fit(Z - latent_mean)
+fidelity = np.cumsum(pca_fid.explained_variance_ratio_)
+```
+Why subtracting the mean?
+```
+Hence, dimensions of the posterior distribution qφ(z|x) that have collapsed to the prior p(z) will result in a constant value in Z′, that we set to 0 by removing the average of Z′ across the first dimension. The only dimensions of Z′ with non-zero values are therefore correlated with the input, which constitute the informative part of the latent spac
+```
+ok bro
 # prior model
 **note:** trained on only top N latent dimensions based on either a specified value or _fidelity_, meaning what percentage of explained variance do we want
 # goals/evaluation
