@@ -33,6 +33,8 @@ connected to the narrative described in [[thesis goals]]
 3. meaningful dimensions - "effective" dimensionality, like in [[RAVE]]
 4. a measure of the quality of the latent space - [gilbo](https://arxiv.org/abs/1802.04874)
     1. mutual information between latent and data distributions
+    2. plan with a small description - `~/.claude/plans/hi-there-so-i-tingly-newt.md `
+    3. "how many distinguishable samples does this decoder actually produce as a function of its latent input?"
 5. latent space used dimensions - _fidelity_ from [[RAVE]]
 
 disentaglement metrics?
@@ -81,9 +83,9 @@ out of scope: comparing different normalizing flows
     - [x] (vctk) train NF prior
 - percussive2
     - [x] (percussive2) train no-NF
-    - [ ] (percussive2) train NF
+    - [x] (percussive2) train NF
     - [ ] (percussive2) train RAVE+prior
-    - [ ] (percussive2) train NF prior
+    - [x] (percussive2) train NF prior
 - freesound_sfx
     - [ ] (freesound_sfx) train no-NF
     - [ ] (freesound_sfx) train NF
@@ -99,7 +101,7 @@ the "eval suite" is:
 - encode(val_set) -> dim reduction -> MIG based on percep. labels (_disentaglement_)
 - interpolate two latents -> decode (_idk even_)
 - modify a single latent in different directions -> decode (_idk even_)
-- gilbo (data-latent mutual information - _latent space complexity_)
+- gilbo (data-latent mutual information - _learned model complexity_)
 - posterior-prior mmd (prior holes - _prior quality_)
 
 and visualizations?
