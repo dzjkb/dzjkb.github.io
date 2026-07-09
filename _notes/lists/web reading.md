@@ -4,17 +4,13 @@ random light things to read/watch from the internet like blogposts, articles, yt
 ### news
 
 ### music
-- all the open bandcamp tabs goddamn
 - [classic compressors](https://www.soundonsound.com/techniques/classic-compressors), [choosing the right one](https://www.plugin-alliance.com/en/blog/blogpost/items/choosing-the-right-compressor-plugin.html)
 - glenn mcdonald (formerly spotify)
     - has a book on music streaming/recommendation services?
 ### other
-- (done) [zettelkasten](https://zettelkasten.de/overview/)
-    - done with the intro, not sure this is something I need?
 - [developing transformative tools for thought (2019)](https://numinous.productions/ttft/)
 - [the marginalian](https://www.themarginalian.org/2024/10/22/marginalian-18/)
     - seems like an interesting blog (is it actually a blog?)
-- (done) [Julia's poems on mały format](http://malyformat.com/2025/03/mozg-terrorystki/)
 - https://www.k-h-n-k.com/
 ### cs
 * [how I program with LLMs](https://crawshaw.io/blog/programming-with-llms)
@@ -57,3 +53,4 @@ random light things to read/watch from the internet like blogposts, articles, yt
 - https://www.jasonhickel.org/blog/2024/8/20/credit-guidance-how-we-achieve-degrowth
     - ! more up to date stuff from Jason Hickel
     - a goldmine re: [[degrowth]]
+- [zettelkasten](https://zettelkasten.de/overview/)

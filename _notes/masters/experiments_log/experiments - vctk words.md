@@ -125,7 +125,17 @@ experiments on the [[VCTK]] dataset
 ## prior
 - #0 (`v1.yaml`, `version_0` logdir)
     - ok first tries, this goes quick af; no problem fitting the prior, the random test/val split seems useless but w/e
+## with KALL-E style flow
+- #0 (`nf_kalle_v1.yaml`, `version_0` logdir)
+    - same parameters as NF #8
+    - gradients are exploding, it's learning but slightly worse than NF
+    - very similar metrics except latent loss that's significantly lower - ~200 vs ~500 earlier - but exploding to absurd values periodically (often)
+    - something's ill-conditioned in the flow
+    - the reconstructions are starting to have weird phase artifacts before the second phase, woops
+- #1 (`nf_kalle_v1.yaml`, `version_1` logdir)
+    - reduced LR to `5e-5 -> 2e-5`; increased latent loss weight to `3e-4`; set a small 10k latent loss warmup
 # latent space analysis
+in `vae_latent_analysis[_nf].ipynb`
 # eval metrics
 
 no-NF: `version_14`, NF: `version_8`, reference set: `vctk_words_v2/audio_val`

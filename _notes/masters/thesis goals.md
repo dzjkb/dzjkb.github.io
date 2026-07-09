@@ -50,7 +50,7 @@ For this reason the thesis places a larger emphasis on the diversity of uncondit
 ## 0 - a single latent vector enables novel  ways of creative usage
 advantages:
 - latent dimensions can capture global features
-- latent dimensions can be modified to manually adjust
+- latent dimensions can be modified to manually adjust these features
 ## 1 - audio quality is similar
 _If we reduce the 23Hz continuous latent vectors down to one vector of length 256 (effectively increasing the compression ratio by TODO) we can still reconstruct high quality audio_
 
@@ -60,8 +60,14 @@ metrics to show:
 - FAD/KID on mgr reconstructions
 - FAD/KID on RAVE reconstructions
 - (?) FAD from the [[RAVE]] paper
-## 2 - Normalizing Flows improve quality
-_Using Normalizing Flows for posterior/prior distributions results in higher quality reconstructions_
+
+initial result - yes, it's similar
+limitations:
+- didn't use latest [[RAVE]] techniques due to hardware/time constraints
+- didn't conduct many experiments due to the same constraints (kind of canceling eachother out lmao)
+- 
+## 2 - Normalizing Flows improve reconstruction quality
+_Using Normalizing Flows for the posterior distributions results in higher quality reconstructions_
 
 setup: training w/ NFs
 
@@ -69,6 +75,8 @@ metrics to show:
 - FAD/KID on mgr reconstructions
 - [x] sth to show that the distributions are "better"? gilbo? clustering w/ perceptual labels?
 - latent space [[experiments]] - ?
+
+initial result: nope
 ## 3 - Normalizing Flows improve prior generation
 _Using Normalizing Flows for posterior/prior distributions results in generation from the prior_
 
@@ -77,13 +85,21 @@ setup: training w/ NFs
 metrics to show:
 - FAD/KID on mgr unconditional generations
 - latent space [[experiments]] - ?
-## 4 - the model learns disentangled features
-_As above_
 
-setup: standard training or NF trianing
+initial results:
+- posterior don't do shit
+- **prior improves it drastically**
+## 4 - the model learns disentangled features
+_Using Normalizing Flows for the posterior distribution results in more disentangled features_
+
+setup: standard training or NF training
 
 graphs to show:
 - viz in 3D with colors for labels
 - disentaglement metrics, see [[experiments]] - ?
+
+initial result: nope, just spreads out the variance
 ## ? - prior generation is easier with similar quality
 _Unconditional generation from the prior doesn't require a specially trained model while retaining good quality_
+
+what does this even mean? [[RAVE]] is already realtime

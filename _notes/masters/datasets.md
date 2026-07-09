@@ -39,6 +39,9 @@ source different ds types from this
 snares1 + some sounds from FSDKaggle2018 + idk maybe sth
 ## percussive2
 `percussive2 = percussive1 + laion_snares_1`
+## Emilia
+speech dataset from 2024 oh shit
+[[Emilia]]
 # final experiment datasets
 ## VCTK words
 individual words cut out from [[VCTK]]

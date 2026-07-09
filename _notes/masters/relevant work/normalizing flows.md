@@ -9,7 +9,7 @@ more expressive latent space -> better reproduction/unconditional generation
 - isn't this just equivalent to more capacity? the flow could be just learned by the decoder
 
 #### [Variational Inference with Normalizing Flows](https://arxiv.org/pdf/1505.05770)
-2016
+2015
 ```
 It is one of these limitations, the choice of
 posterior approximation, that we address in this paper.
@@ -25,7 +25,7 @@ show that in the asymptotic regime, the space of solutions
 is rich enough to contain the true posterior distribution
 ```
 right that's exactly what I want, no?
-- [ ] Variational Inference with normalizing flows - what class of flows to approximate the posteriors is this? [frozen:: true]
+- [x] Variational Inference with normalizing flows - what class of flows to approximate the posteriors is this? [frozen:: true]
 
 DLGMs - generalizations of models with latent variables, apparently [[VAE]]s can be thought of as DLGMS 
 
@@ -109,6 +109,12 @@ ok ok ok
 not that much detail on the VAE w/ NF training
 but there's NF applied to priors and that's the key
 
+[Improving Variational Inference with Inverse Autoregressive Flow](https://arxiv.org/abs/1606.04934)
+most cited NF posterior work
+introducing IAFs - shows improvement of quality using IAFs for the posterior
+- "scales well to high-dimensional spaces"
+- reports NLL on MNIST and CIFAR-10
+
 [Learning Energy-based Variational Latent Prior for VAEs (2025)](https://arxiv.org/html/2510.00260)
 oh shi this is fresh
 ```
@@ -131,16 +137,35 @@ but I'd just go straight for an NF prior
 uses nearest neighbors in PCA-transformed latent space to assess overfitting hm ok ok
 MMD to measure "prior holes", so pretty much the difference of prior/posterior distributions
 KLD weight experiment would suggest that even if we set it low (i.e. optimizing for reconstruction rather than generation), we still get good generation quality (measured by FID), which would suggest the decoder doesn't learn the more complicated prior itself
+
+[Masked Autoregressive Flow for Density Estimation](https://arxiv.org/abs/1705.07057)
+?
+
+[KALL-E: Autoregressive Speech Synthesis with Next-Distribution Prediction](https://arxiv.org/pdf/2412.16846)
+```
+We augment the vanilla VAE with a normalising flow (Rezende and Mohamed 2015) f , which establishes a bijective transformation between a simple prior and a more complex posterior. We note that similar approaches using normalizing flows to enhance prior distributions have also been observed in (Kim, Kong, and Son 2021) (Zhang et al. 2025) for text-to-speech. Concretely, we draw z ∼ N (μϕ(x), σϕ(x)) and obtain ˜z = f (z). The regularisation objective minimises the Kullback–Leibler divergence between the transformed posterior and the standard normal prior: ... This regularises the encoder to produce Gaussian-distributed latents without forcing them into a unit standard normal, thereby increasing the diversity of the latent space.
+```
+the fuck
+they use a flow but don't actually train the decoder on the flow output?
+
+they use discriminator training + stft loss (only L1) too
+
+shit this could make sense - my flows trained so far spread out variance but don't really mix dimensions, which is what I assume was their rationale here
+
+and then, to sample from the prior - take `z ~ N(0, 1)` and pass through the inverse flow
+??? fucking genius bro let's do it
 ## other reading
 - [x] read [Conditional Variational Autoencoder with Adversarial Learning for End-to-End TTS - VITS (2021)](https://arxiv.org/pdf/2106.06103)
 - [x] read [Naturalspeech: End-to-end text to speech synthesis with human-level quality](https://arxiv.org/abs/2205.04421)
-- [ ] [Improving Variational Inference with Inverse Autoregressive Flow](https://arxiv.org/abs/1606.04934) [frozen:: true]
+- [x] [Improving Variational Inference with Inverse Autoregressive Flow](https://arxiv.org/abs/1606.04934)
     - idk this is an old one
 - [x] [Learning Energy-based Variational Latent Prior for VAEs](https://arxiv.org/html/2510.00260) [frozen:: true]
 - [x] [Variational Autoencoders with Normalizing Flow Decoders (2020)](https://ar5iv.labs.arxiv.org/html/2004.05617)
     - https://arxiv.org/pdf/2004.05617
 - [x] FloWaveNet (2019)
 - [x] [WaveFlow (2020)](https://arxiv.org/abs/1912.01219)
+- [ ] [Masked Autoregressive Flow for Density Estimation](https://arxiv.org/abs/1705.07057) [frozen:: true]
+- [ ] [KALL-E: Autoregressive Speech Synthesis with Next-Distribution Prediction](https://arxiv.org/pdf/2412.16846) [frozen:: true]
 ## implementations
 https://github.com/VincentStimper/normalizing-flows
 ![[Pasted image 20251220155102.png]]
@@ -164,3 +189,20 @@ oh shi oh shi, some big probabilistic ML package
 or wait no it uses zuko for the NFs nvm, but
 ![[Pasted image 20251224112904.png]]
 !!!!
+# Why normalizing flows?
+revisit the question after a bit of experimenting
+the results so far - NFs just spread the variance across more dimensions (using more dimensions, lower KL - closer to `N(0, 1)`), but
+- disentaglement - encoder structure - doesn't improve
+- quality doesn't improve
+why? we actually take pressure _off_ of the encoder to organize the space close to `N(0, 1)`
+so what can flows actually give us?
+
+Kagi research says that NF posteriors are in fact rare
+![[Pasted image 20260703183420.png]]
+basically the initial theoretical work and then like two papers
+
+theorizes it might be due to other methods - e.g. hierarchical VAEs - offering much better/cheaper posterior flexibility
+fuck
+
+so what do I do
+try KALL-E style flows -> focus on different aspects?

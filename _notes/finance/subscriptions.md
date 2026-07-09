@@ -18,7 +18,7 @@ total = **2754.30**
 | pogoń pyton        | 100          |
 | MJN                | 35           |
 | Google One         | 8.99         |
-| Spotify            | 5            |
+| Spotify            | 6            |
 | Tidal              | 8            |
 | Kagi               | ~113         |
 | RYM                | 6.15         |
@@ -26,5 +26,6 @@ total = **2754.30**
 | Multisport         | 69.99        |
 | Hasanabi twitch    | ~18          |
 | Jottacloud         | ~24.21       |
-total = **436.22**
+| Razem              | 40           |
+total = **477.22**
 quite a bit, eh, but I though it might be worse

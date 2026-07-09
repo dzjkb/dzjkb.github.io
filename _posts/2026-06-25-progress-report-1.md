@@ -53,6 +53,21 @@ layout: Post
     - running DrumGAN on VCTK words currently
 
 ---
+### The research hypothesis
+
+- if we take a [[RAVE]]-like VAE and reduce the latent representation to a single vector we can achieve similar reconstruction/uncond. generation quality
+- normalizing flows will improve reconstruction/uncond. generation quality in this single-latent version
+- a single-latent version will capture interpretable global properties in the latent space that can then be controlled
+
+<br>
+conclusions so far:
+- the single-latent version achieves comparable quality
+- an NF posterior does not improve anything, but an NF prior drastically improves uncond. generation
+- global properties on VCTK words - gender, accent, duration, word:
+    - are spread over all of the dimensions
+    - prediction accuracies based on the latent representation: gender high; duration high; accent low; word medium
+
+---
 ### Results
 VCTK words:
 

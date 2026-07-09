@@ -30,12 +30,11 @@ connected to the narrative described in [[thesis goals]]
     - quantitative: classifying the features based on the latent space or PCA transformed space (_linear latent arithmetic_)
     - qualitative: just a visual evaluation of these clusters
 2. modifying a single sample in some latent space direction or interpolate between different samples and "visualize" the transformation (like drawing a mnist grid) (_interventional travels_)
-3. meaningful dimensions - "effective" dimensionality, like in [[RAVE]]
+3. meaningful dimensions - "effective" dimensionality - _fidelity_ as defined in [[RAVE]]
 4. a measure of the quality of the latent space - [gilbo](https://arxiv.org/abs/1802.04874)
     1. mutual information between latent and data distributions
     2. plan with a small description - `~/.claude/plans/hi-there-so-i-tingly-newt.md `
     3. "how many distinguishable samples does this decoder actually produce as a function of its latent input?"
-5. latent space used dimensions - _fidelity_ from [[RAVE]]
 
 disentaglement metrics?
 - [[Mutual Information Gap]]
@@ -43,6 +42,14 @@ disentaglement metrics?
 - Separated Attribute Predictability
 
 fun experiment but idk what would the conclusions be: take the same word from different speakers/context -> see what latent space representations they have -> interpolate between them
+- ok maybe this could actually find something
+- take two speakers (or three?), compare their latent representations + their word distributions
+- linear classification of words, silhoutte metrics, pure distance-based classification
+
+remember about this in the discussion btw:
+```
+**All Current Generative Fidelity and Diversity Metrics are Flawed"** (Räisä, van Breugel & van der Schaar, ICML 2025 — arXiv:2505.22450)
+```
 ### ~~single latent reduction method~~
 inter-channel dependencies or not? yeah probably safe to say they're necessary
 maybe a different option would be several more conv layers instead of the extreme `kernel_size=24` or sth ok maybe that's not that extreme

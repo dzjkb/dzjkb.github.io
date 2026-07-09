@@ -36,10 +36,11 @@ where do I even search for this shit
 - https://www.toogoodtogo.com/careers/6545687003
 ## not exactly sustainability
 but, well, maybe getting rich quick first is the way to go?
+yeah I don't think so really
 ### Elevenlabs
 ### LeCun's lab
 don't think that's realistic unfortunately
 https://amilabs.xyz/
 ### Proton
 https://job-boards.eu.greenhouse.io/proton/jobs/4779869101
-idk, working on email filters?
+idk, working on email filters? nah
