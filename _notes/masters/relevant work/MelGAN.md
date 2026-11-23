@@ -18,6 +18,7 @@ non-autoregressive convolutions
 - or at least [[Parallel WaveGan]] did, seems like these happened at the same time
 Unlike GANSynth, modeling the waveform instead of STFT magnitudes (which then required an additional step of phase estimation and reconstruction)
 ### architecture
+spec from [Text2Mel](https://arxiv.org/pdf/1710.08969) first
 ### misc
 uses 0.5, 0.9 betas for Adam (RAVE inspiration?)
 finds weight normalization looks best (RAVE inspiration again?)
@@ -27,6 +28,8 @@ does LSTM prior learning on sequences from the latent space! (RAVE inspiration d
 - [x] what are the goals/evaluation methods for MelGan?
 
 ### experiments
+ok so this [LJ Speech dataset](https://keithito.com/LJ-Speech-Dataset/) is audio+transcription, how tf are you doing ground truth spectrogram inversion on this come on bro
+
 - ablation studies (MOS)
 - comparing text to speech with different text->melspec backends (MOS)
 - VAE style music reconstruction (only qualitative analysis [here](https://melgan-neurips.github.io/)) (showing generality of the approach)
@@ -34,6 +37,7 @@ does LSTM prior learning on sequences from the latent space! (RAVE inspiration d
     - original [from Oord too](https://arxiv.org/abs/1711.00937)
     - the latent representation is a sequence of discrete vectors **plus** a global latent vector, interesting
     - latent vectors are in the place of mel spectrograms
+- decoder for the [Universal Music Translation Network](https://openreview.net/pdf?id=HJGkisCcKm) (also an autoencoder, originally with an autoregressive decoder)
 ### evaluation methods
 **Mean Opinion Score** tests (described in appendix C)
 - 200 individuals
@@ -42,3 +46,5 @@ does LSTM prior learning on sequences from the latent space! (RAVE inspiration d
 **Qualitative analysis**
 - basically a couple of samples on a webpage
 - supplements the quantitative analysis above
+### results
+wait what their MOS is worse than wavenet/waveglow

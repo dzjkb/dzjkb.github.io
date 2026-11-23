@@ -15,7 +15,8 @@ or even just scherzos, 40+ min more than enough
 ## soft channel
 oh shit
 https://giantclaw.bandcamp.com/album/soft-channel
-## sfx
+## sfx1
+from laion 630k freesound
 ## custom synth sounds
 how long would it take me to produce like an hour worth of specific synth samples
 what synth samples would this be?
@@ -39,9 +40,15 @@ source different ds types from this
 snares1 + some sounds from FSDKaggle2018 + idk maybe sth
 ## percussive2
 `percussive2 = percussive1 + laion_snares_1`
+## percussive3 - TBD
+https://huggingface.co/datasets/yojul/one-shot-hip-hop-drums
+https://github.com/HSUNEH/DOSE
 ## Emilia
 speech dataset from 2024 oh shit
 [[Emilia]]
+## percussive continued
+so, the idea would be to automatically extract one-shots from loops
+[E-GMD](https://magenta.tensorflow.org/datasets/e-gmd)
 # final experiment datasets
 ## VCTK words
 individual words cut out from [[VCTK]]

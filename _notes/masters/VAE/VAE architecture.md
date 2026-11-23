@@ -77,7 +77,7 @@ notes:
 - short windows are more about time resolution/events, longer about frequency distribution
 - the eps in `log(|STFT(x)| + eps)` sets the noise floor under which the loss doesn't push further - important for some data types
 
-- [ ] mix mel+linear stft log magnitude distances to control frequency emphasis
+- [ ] mix mel+linear stft log magnitude distances to control frequency emphasis [frozen:: true]
     - note: this might impact speed, verify it's not too expensive
 # Improvements TODO
 - [x] weight norm (moved from [[2025-07-06]])

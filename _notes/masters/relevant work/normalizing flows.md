@@ -8,6 +8,25 @@ invertible transforms
 more expressive latent space -> better reproduction/unconditional generation
 - isn't this just equivalent to more capacity? the flow could be just learned by the decoder
 
+original works
+- https://math.nyu.edu/~tabak/publications/Tabak-Turner.pdf
+- https://math.nyu.edu/~tabak/publications/CMSV8-1-10.pdf
+#### [NICE](https://arxiv.org/pdf/1410.8516)
+2015
+(almost) first ones to use neural nets for NFs
+- some dudes tried in 2013
+- they made it scalable and practical
+didn't call it NFs or reference the original works at all though, rather independent component estimation/analysis stuff
+
+additive coupling layers - the transformed half is
+$$ y_1 = x_1 + m(x_2)$$
+so basically a residual layer, with redundancy to make it invertible
+nice
+
+>We also note that NICE can enable more powerful approximate inference allowing a more complex family of approximate posterior distributions in those models, or a richer family of priors.
+
+nice
+
 #### [Variational Inference with Normalizing Flows](https://arxiv.org/pdf/1505.05770)
 2015
 ```

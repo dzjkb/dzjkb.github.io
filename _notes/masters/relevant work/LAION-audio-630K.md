@@ -2,6 +2,7 @@
 - [laion-audio-630k specific dir](https://github.com/LAION-AI/audio-dataset/tree/main/laion-audio-630k)
 [CLAP repo](https://github.com/LAION-AI/CLAP) for reference
 [example of dataset format (gdrive)](https://drive.google.com/drive/folders/1scyH43eQAcrBz-5fAw44C6RNBhC3ejvX)
+[CLAP paper](https://arxiv.org/abs/2211.06687)
 
 4 datasets available: (**BBC sound effects, Epidemic Sound, Audiostock and Freesound**)
 Freesound is available on [huggingface](https://huggingface.co/datasets/Meranti/CLAP_freesound), rest is csvs with urls that you need to download yourself probs?

@@ -17,3 +17,7 @@ The work will focus on:
 - exploring methods to disentangle the hidden representation and adapt the model for use as an instrument
 
 continuing in [[2025-12-30-masters-overview]]
+# important things to keep in mind
+code is not strictly required - a github link will do
+no official page count requirements either
+at least 20 references (easy)

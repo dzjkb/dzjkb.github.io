@@ -91,13 +91,13 @@ out of scope: comparing different normalizing flows
 - percussive2
     - [x] (percussive2) train no-NF
     - [x] (percussive2) train NF
-    - [ ] (percussive2) train RAVE+prior
+    - [x] (percussive2) train RAVE+prior
     - [x] (percussive2) train NF prior
 - freesound_sfx
-    - [ ] (freesound_sfx) train no-NF
-    - [ ] (freesound_sfx) train NF
-    - [ ] (freesound_sfx) train RAVE+prior
-    - [ ] (freesound_sfx) train NF prior
+    - [x] (freesound_sfx) train no-NF
+    - [x] (freesound_sfx) train NF
+    - [x] (freesound_sfx) train RAVE+prior
+    - [x] (freesound_sfx) train NF prior
 
 the "eval suite" is:
 - reconstructions -> FAD/KID vs val set (_quality_)

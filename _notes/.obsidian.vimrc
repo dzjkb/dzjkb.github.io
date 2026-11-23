@@ -10,5 +10,4 @@ inoremap jk <Esc>
 
 set smartindent
 set expandtab
-set shiftwidth=4
 set tabstop=4

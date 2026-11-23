@@ -11,5 +11,5 @@ based on [DurIAN: Duration Informed Attention Network For Multimodal Synthesis](
 - links some paper from 94
 no code provided, neither for melgan nor for durian
 
-oh wait [[Parallel WaveGan]] does pqmf???
+~~oh wait [[Parallel WaveGan]] does pqmf???~~ no
 [github](https://github.com/kan-bayashi/ParallelWaveGAN/blob/master/parallel_wavegan/layers/pqmf.py)

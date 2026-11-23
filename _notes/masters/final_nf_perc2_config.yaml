@@ -1,0 +1,81 @@
+batch_size: 10
+callbacks:
+  adversarial_losses_warmup_len: 0
+  discriminator_warmup_len: 0
+  encoder_training_len: 280000
+  initial_latent_weight: 1.0e-06
+  latent_weight_warmup_length: 160000
+  target_latent_weight: 0.0002
+checkpoint_path: null
+clap_device: cpu
+dataset:
+  augment: true
+  caching: false
+  expected_sample_rate: 48000
+  mono: true
+  zero_pad_cut: 49152
+device: cuda
+epochs: 800
+experiment_name: percussive2_nf
+log_dir: /media/Data/jp_dir/sounds/aws_training
+model:
+  activation: relu
+  adam_betas: !!python/tuple
+  - 0.5
+  - 0.9
+  advanced_diagnostics: null
+  adversarial_loss_weight: 1.0
+  capacity: 94
+  detect_nans: false
+  dilations:
+  - - 1
+    - 3
+    - 9
+  - - 1
+    - 3
+    - 9
+  - - 1
+    - 3
+    - 9
+  - - 1
+    - 3
+  discriminator_lr: 5.0e-06
+  do_amp_mod: true
+  do_weight_norm: true
+  feature_loss_weight: 40.0
+  final_lr: 1.0e-05
+  fixed_length: 49152
+  grad_clip: null
+  initial_lr: 1.0e-05
+  latent_loss_weight: 0.5
+  latent_size: 256
+  monitor_grad_norm: false
+  mono: true
+  n_bands: 16
+  nf_posterior_layers: 6
+  nf_prior_layers: null
+  prior_loss_weight: 1.0
+  reconstruction_loss_weight: 1.0
+  reduction_method: conv
+  stft_eps: 0.001
+  stft_mel: true
+  stft_n_mels: 128
+  strides:
+  - 4
+  - 4
+  - 4
+  - 2
+noise:
+  do_weight_norm: true
+  latent_size: 128
+  n_filters: 6
+  strides:
+  - 2
+  - 2
+  - 2
+precision: 16-mixed
+separate_run: null
+test_set_path: null
+train_dataset_path: /media/Data/jp_dir/sounds/percussive2_train
+val_dataset_path: /media/Data/jp_dir/sounds/percussive2_val
+val_every: 10

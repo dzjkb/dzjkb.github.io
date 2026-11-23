@@ -1,6 +1,9 @@
-2016 - Van den Oord
+2016 - Van den *Oord*
 [paper](https://arxiv.org/pdf/1609.03499)
 dilated + causal convolutions, thank wavenet
+inspo
+- [PixelCNN](https://arxiv.org/abs/1601.06759)
+- [cośtam józefowicz language modeling](https://arxiv.org/abs/1602.02410)
 # goals/evaluation methods
 - [x] what are the goals/evaluation methods of WaveNet?
 baseline - concatenative speech generation
@@ -16,3 +19,4 @@ baseline - concatenative speech generation
 - 2 samples - preference or neutral
 - additionally - rate the "naturalness" in a five-point Likert scale
 - described in Appendix B
+

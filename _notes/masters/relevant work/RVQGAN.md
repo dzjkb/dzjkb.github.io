@@ -7,6 +7,9 @@ why weight norm not spectral norm for the discriminators?
 - nothing in the paper
 
 `[2, 4, 8, 8]` downsampling rates in the encoder
+
+# disc
+MPD is from [HiFi GAN](https://arxiv.org/pdf/2010.05646)
 # goals/evaluation
 ### experiments
 -

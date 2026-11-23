@@ -1,5 +1,6 @@
 2020 - continuation of [[NSynth]]
 https://github.com/magenta/ddsp
+[paper](https://arxiv.org/pdf/2001.04643)
 still trained on single notes
 ### filtered noise
 ```

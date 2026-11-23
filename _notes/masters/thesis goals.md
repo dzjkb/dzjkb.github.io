@@ -43,16 +43,37 @@ improving VAEs, probably mainly through making the pior/posterior more sophistic
 # non-goals
 - real-time generation
 - usable modules? at least for now, would be nice to do later
-# goal #2 - diversity
+# goals
 One of the goals of this thesis is to explore, for the studied methods, their capabilities to generate diverse and novel sounds. While this is often an overlooked aspect in generative audio models - usecases such as audio codecs or prompt-conditioned generation do not require novelty in the model itself - diversity is critical to creative applications. The artistic process is often one of exploration and experimentation, where the artist doesn't just impose his vision onto his means of expression - they come into dialogue with their tools, seeking inspiration in their unexpected behaviour or various quirks and building on them further.
 For this reason the thesis places a larger emphasis on the diversity of unconditional generation with both qualitative and quantitative evaluation - see [[diversity metrics]].
+
+**iteration 2:**
+
+in points
+- aiming to provide _high-level_, _intuitive_ and _global_ controls for sound generation - a neural synthesizer of _individual samples_, not whole tracks
+- learn the controls instead of hand-selecting the controls and conditioning the learning process
+- VAEs make this combination possible if we fix the clip length and have a single latent vector per audio sample
+in text
+```
+```
 # narrative
+briefly:
+- I've trained these models with this modification (single-latent VAE, NF prior)
+- it doesn't degrade quality compared to similar works
+- they extracted some interpretable _global_ features in the latent space
+- I can generate quite diverse legit examples from them
+- and control these features in the process
+also:
+- latent space is used more effectively? as in all dimensions
+
+some more thoughts
+- all DSs suggest we can capture these coarser features
+- sfx would suggest that happens even if we overfit on very random unrelated examples
+- which means that if we increase model+dataset size we could probably get into more and more levels of detail captured in the latent space
 ## 0 - a single latent vector enables novel  ways of creative usage
-advantages:
-- latent dimensions can capture global features
-- latent dimensions can be modified to manually adjust these features
+?
 ## 1 - audio quality is similar
-_If we reduce the 23Hz continuous latent vectors down to one vector of length 256 (effectively increasing the compression ratio by TODO) we can still reconstruct high quality audio_
+_If we reduce the 23Hz continuous latent vectors down to one vector of length 256 (effectively increasing the compression ratio by ~12) we can still reconstruct high quality audio_
 
 setup: standard training
 
@@ -78,7 +99,7 @@ metrics to show:
 
 initial result: nope
 ## 3 - Normalizing Flows improve prior generation
-_Using Normalizing Flows for posterior/prior distributions results in generation from the prior_
+_Using Normalizing Flows for posterior/prior distributions results in higher quality generation from the prior_
 
 setup: training w/ NFs
 
@@ -89,7 +110,7 @@ metrics to show:
 initial results:
 - posterior don't do shit
 - **prior improves it drastically**
-## 4 - the model learns disentangled features
+## ~~4 - the model learns disentangled features~~
 _Using Normalizing Flows for the posterior distribution results in more disentangled features_
 
 setup: standard training or NF training
@@ -99,6 +120,17 @@ graphs to show:
 - disentaglement metrics, see [[experiments]] - ?
 
 initial result: nope, just spreads out the variance
+## 4 - the model learns linearly controllable global features
+_If we reduce the 23Hz continuous latent vectors down to one vector of length 256, the latent representation will encode whole-sample properties that we can control during generation_
+
+setup: standard or NF training
+
+to show:
+- performance of linear classifiers on the latent space of
+    - attack/decay
+    - TCToTotal/maxToTotal
+    - dur_to_50/90pct_s
+- a sweep of generations varying in these directions
 ## ? - prior generation is easier with similar quality
 _Unconditional generation from the prior doesn't require a specially trained model while retaining good quality_
 

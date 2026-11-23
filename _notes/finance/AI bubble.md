@@ -26,7 +26,10 @@ market exploration tools
 - inspecting prices, volumes, open orders
     - might be too granular? not sure I could read anything there
 ### timeframe
-dotcom bubble, 2008 crisis - what where the lengths of each recession step?
+dotcom bubble, 2008 crisis
+
+https://www.youtube.com/watch?v=WXV9emaUeo0
+(2026-11-10) south korea/china popped already
 # discussion
 Burry's arguments
 - oversupply without revenue backing it up

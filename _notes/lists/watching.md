@@ -10,8 +10,10 @@
 - Serce Miłości (o Bąkowskim)
 ## documents
 - scena zbrodni
+## china
+- a touch of sin - Jia Zhangke
+- ash is purest white - Jia Zhangke
 ## anime
-- AOT
 - Utena
 
 also [[random recs]]

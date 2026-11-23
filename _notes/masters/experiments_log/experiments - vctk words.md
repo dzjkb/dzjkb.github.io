@@ -134,6 +134,13 @@ experiments on the [[VCTK]] dataset
     - the reconstructions are starting to have weird phase artifacts before the second phase, woops
 - #1 (`nf_kalle_v1.yaml`, `version_1` logdir)
     - reduced LR to `5e-5 -> 2e-5`; increased latent loss weight to `3e-4`; set a small 10k latent loss warmup
+    - ok looks good, learning at basically the same rate as previously and nfv8
+    - forgot to lower the discriminator lr though
+- #2 (`nf_kalle_v1.yaml`, `version_2` logdir)
+    - starting from end of phase 1 checkpoint; disc lr = `1e-6`
+    - somehow the discriminator loss is falling even faster lmao what
+    - but generally the curves are very similar
+    - continuing from `last.ckpt` in #2; fm weight `30.0`; adv weight `1.0`
 # latent space analysis
 in `vae_latent_analysis[_nf].ipynb`
 # eval metrics
@@ -155,16 +162,18 @@ CLAP embeddings using `music_audioset_epoch_15_esc_90.14.pt`
 
 same but CLAP using `music_speech_epoch_15_esc_89.25.pt` and only the 3M rave prior:
 
-| model      | mode           | KID    | FAD     | Vendi  |
-| ---------- | -------------- | ------ | ------- | ------ |
-| no-NF      | reconstruction | 0.0015 | 0.0248  | 5.9449 |
-| NF         | reconstruction | 0.0015 | 0.0247  | 6.1620 |
-| RAVE       | reconstruction | 0.0017 | 0.0268  | 5.9428 |
-| no-NF      | unconditional  | 0.0534 | 0.5886  | 3.9058 |
-| NF         | unconditional  | 0.0549 | 0.6049  | 3.5694 |
-| RAVE+prior | unconditional  | 0.0535 | 0.5804  | 4.3253 |
-| NF+prior   | unconditional  | 0.0115 | 0.1491  | 5.6436 |
-| **self**   | **comparison** | 0.0000 | -0.0001 | 6.1212 |
+| model           | mode           | KID    | FAD     | Vendi  |
+| --------------- | -------------- | ------ | ------- | ------ |
+| no-NF           | reconstruction | 0.0015 | 0.0248  | 5.9449 |
+| NF              | reconstruction | 0.0015 | 0.0247  | 6.1620 |
+| RAVE            | reconstruction | 0.0017 | 0.0268  | 5.9428 |
+| NF KALL-E style | reconstruction | 0.1433 | 1.5684  | 3.4094 |
+| no-NF           | unconditional  | 0.0534 | 0.5886  | 3.9058 |
+| NF              | unconditional  | 0.0549 | 0.6049  | 3.5694 |
+| RAVE+prior      | unconditional  | 0.0535 | 0.5804  | 4.3253 |
+| NF+prior        | unconditional  | 0.0115 | 0.1491  | 5.6436 |
+| NF KALL-E style | unconditional  | 0.1061 | 1.2634  | 5.8274 |
+| **self**        | **comparison** | 0.0000 | -0.0001 | 6.1212 |
 
 parameter counts:
 

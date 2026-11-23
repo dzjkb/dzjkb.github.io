@@ -57,8 +57,11 @@
 | **self** | **comparison** | 0.0000 | 0.0000 | 21.6521 |
 | no-NF    | reconstruction | 0.0045 | 0.1569 | 15.2375 |
 | NF       | reconstruction | 0.0040 | 0.1271 | 15.2508 |
-| RAVE     |                |        |        |         |
+| RAVE     | reconstruction | 0.0126 | 0.3082 | 16.4382 |
 | no-NF    | unconditional  | 0.0537 | 0.8103 | 10.0454 |
 | NF       | unconditional  | 0.0504 | 0.7732 | 10.2943 |
-| RAVE     |                |        |        |         |
+| RAVE     | unconditional  | 0.0350 | 0.7139 | 14.0476 |
 | NF+prior | unconditional  | 0.0180 | 0.3539 | 9.7582  |
+| DrumGAN  | unconditional  | 0.0197 | 0.3647 | 15.6899 |
+# latent space analysis
+features extracted with `essentia` in `percussive2_val_labels.csv`

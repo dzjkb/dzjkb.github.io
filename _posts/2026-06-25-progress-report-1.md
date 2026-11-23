@@ -107,7 +107,7 @@ Fidelity for VCTK words, as defined in RAVE:
 | 0.99     | 154   | 181 |
 
 <br>
-Model sizes for VCTK words:
+*Model* sizes for VCTK words:
 
 | model                         | params |
 | ----------------------------- | ------ |

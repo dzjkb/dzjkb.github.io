@@ -6,7 +6,9 @@ feed: hide
 category: notes
 tags:
   - book
-  - in_progress
+  - read
 ---
 a classic
 love the style
+bleak, hopeless
+just defeat

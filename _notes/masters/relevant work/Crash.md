@@ -50,6 +50,13 @@ other experiments:
 - noising/denoising samples
 - inpainting sounds
 - class-conditioning, class-mixing based on a kick/snare/cymbal classifier
+# narrative
+the key goal is _improving diffusion w/ ODEs on audio_ and enabling 44.1kHz generation through novel architectural developments + a new U-net based scoring method(?)
+
+what do they show?
+- controllable high-resolution (44.1kHz) generation
+- many different sampling schemes (as opposed to GANs?)
+- similar performance GANs with a lighter and easier-to-train model
 # misc
 FAD between the test set and the same set but with 10e-4 gaussian noise added is 0.72 ?????
 - "FAD is a very sensitive metric"

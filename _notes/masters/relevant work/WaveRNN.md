@@ -5,3 +5,5 @@ continuation - speed - from Hantrakul, Engel - [paper](https://archives.ismir.ne
 
 contribution - conditioning on loudness/pitch
 - as opposed to WaveNet that focused on speech, conditioning on linguistic features
+
+and basically making wavenet faster?

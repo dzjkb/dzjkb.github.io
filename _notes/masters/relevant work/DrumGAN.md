@@ -2,6 +2,9 @@
 [paper](https://arxiv.org/abs/2008.12073) (updated 2022?)
 [repo](https://github.com/SonyCSLParis/DrumGAN)
 
+[drumgan vst paper](https://arxiv.org/pdf/2206.14723) - a 2022 update making it 44.1kHz for the steinberg plugin
+[backbone 1.5](https://cslmusicteam.sony.fr/news/steinberg-releases-backbone-1-5-incorporating-drumgan/)
+
 uses an Audio Commons Timbre model
 new - generates STFT _with_ the complex part, audio is then just the inverse STFT
 
@@ -27,7 +30,19 @@ info:
 - Kernel Inception Distance
     - measures distance between real and generated distributions
     - based on the last layer of a custom Inception model
-### discussion
+### narrative
+the key goal outlined in the abstract is synthesis done by controlling _high-level_ meaningful features rather than low-level ones, like in traditional synthesizers
+- shi same thing
+this can be done with a model conditioned on relevant information
+the authors train a GAN conditioned on perceptual features from a publicly available feature extractor, which enables intuitive and high-level control over the generation process
+
+what do they show?
+- increased quality vs the baseline U-net approach ("specific prior work")
+- the conditional input shapes the sound characteristics
+
+how could I continue this narrative?
+- rather than rely on feature extractors, a model can extract high-level features itself
+    - shit a comparison of learned-vs-extracted features would be interesting on percussive
 # reproduction
 `train.py` script
 needs a config w/

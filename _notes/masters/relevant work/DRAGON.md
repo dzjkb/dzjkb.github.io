@@ -1,4 +1,4 @@
-deez nuts
+deez nuts across your face
 https://arxiv.org/pdf/2504.15217
 Claude summary:
 ![[Pasted image 20260521204748.png]]

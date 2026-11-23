@@ -3,6 +3,7 @@ these guys fr http://acids.ircam.fr/
 
 main repo - https://github.com/acids-ircam/RAVE/tree/master
 main paper - https://arxiv.org/abs/2111.05011
+vst - https://forum.ircam.fr/projects/detail/rave-vst/
 
 closely related - cached convolutions
 repo - https://github.com/acids-ircam/cached_conv/

@@ -3,7 +3,15 @@
 [paper (arxiv)](https://arxiv.org/pdf/2107.03312)
 
 ## architecture
+auto-encoder inspired by
+- autoregressive discrete autoencoders from [The challenge of realistic music generation: modeling raw audio at scale](https://arxiv.org/pdf/1806.10474) from Oord etc
+    - like a precursor of VQ-VAEs?
+    - wait no, VQ-VAE codecs happened (from Oord too!) in [LOW BIT-RATE SPEECH CODING WITH VQ-VAE AND A WAVENET DECODER](https://arxiv.org/pdf/1910.06464) a year later, but no refs to the music one
+    - huh
+- [[Jukebox]]
+
 also uses a discriminator huhuh
+"proposed in [[MelGAN]], already used successfully in [SEANet](https://arxiv.org/pdf/2009.02095)"
 
 **Encoder**
 
