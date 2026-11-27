@@ -154,7 +154,7 @@ Dwie z nich zostaną w tej pracy opisane bardziej szczegółowo, jako że są t
 
 \subsection{VAE}
 
-\textit{Variational Auto-Encodery} parują generator $gen$ z enkoderem $enc$, który odwraca jego działanie i przekształca przykłady do nisko-wymiarowej reprezentacji $z = enc(x)$, nazywaną \textbf{reprezentacją ukrytą} albo wektorem z \textbf{przestrzeni ukrytej} $Z$. Przestrzeń ta ma zadany rozkład \textit{prior} $p(z)$, a generowanie nowych przykładów odbywa się w dwóch krokach: wylosowanie $z \sim p(z)$, a następnie przekształcenie $\hat{x} = dec(z)$.
+\textit{Autoenkodery wariacyjne} parują generator $gen$ z enkoderem $enc$, który odwraca jego działanie i przekształca przykłady do nisko-wymiarowej reprezentacji $z = enc(x)$, nazywaną \textbf{reprezentacją ukrytą} albo wektorem z \textbf{przestrzeni ukrytej} $Z$. Przestrzeń ta ma zadany rozkład \textit{prior} $p(z)$, a generowanie nowych przykładów odbywa się w dwóch krokach: wylosowanie $z \sim p(z)$, a następnie przekształcenie $\hat{x} = dec(z)$.
 
 O takim modelu można myśleć jak o sieci bayesowskiej $z \to x$, gdzie $p(x) = \int p(x \mid z) \, p(z) \, dz$, $z$ jest niezaobserowaną zmienną a $p(x \mid z)$ wraz z $p(z)$ są rozkładami parametryzowanymi. Dla zaobserwowanych danych $X$, nauczenie sieci to kwestia wyprowadzenia optymalnych parametrów. Ponieważ zarówno wartości $z$ jak i parametry rozkładów są nieznane, znalezienie ich za pomocą metody największej wiarygodności jest niemożliwe. Algorytm \textit{expectation-maximization} (EM) pozwala w takiej sytuacji znaleźć lokalnie optymalne rozwiązanie poprzez iteracyjną procedurę poprawiania błędu. Jedna iteracja składa się z dwóch kroków: 
 \begin{enumerate}
@@ -178,7 +178,7 @@ $$
 $$
 gdzie $z_l = g_{\phi}(\epsilon_l, \, x)$ i $\epsilon_l \sim p(\epsilon)$. Ponieważ $g_{\phi}(\epsilon_l, \, x)$ jest różniczkowalne, można go optymalizować standardowymi metodami spadku wzdłuż gradientu. W praktyce $L$ może być równe 1 jeśli liczba przykładów, na których SVGB jest estymowane jest wystarczająco duża - autorzy podają przykładowo 100. 
 
-W kontekście auto-enkoderów, rozkłady $q_{\phi}(z \mid x)$ i $p(x \mid z)$ są implementowane przez sieci neuronowe - odpowiednio enkoder i dekoder - a prior $p(z)$ jest zwykle ustalonym rozkładem, takim jak $\mathcal{N}(0, \, 1)$. Druga część sumy w estymatorze SVGB, $\log p(x \mid z_l)$, odpowiada \textit{błędowi rekonstrukcji} danego przykładu $x$ po przejściu przez enkoder i dekoder, zaś pierwsza część sumy regularyzuje enkoder tak, żeby zadany przez niego rozkład był jak najbliższy $p(z)$. W dalszych pracach korzystających z VAE błąd rekonstrukcji zaczęto wymieniać na bardziej skomplikowane funkcje dostosowane do konkretnej dziedziny, odchodząc od ścisłego sformułowania estymatora.
+W kontekście autoenkoderów, rozkłady $q_{\phi}(z \mid x)$ i $p(x \mid z)$ są implementowane przez sieci neuronowe - odpowiednio enkoder i dekoder - a prior $p(z)$ jest zwykle ustalonym rozkładem, takim jak $\mathcal{N}(0, \, 1)$. Druga część sumy w estymatorze SVGB, $\log p(x \mid z_l)$, odpowiada \textit{błędowi rekonstrukcji} danego przykładu $x$ po przejściu przez enkoder i dekoder, zaś pierwsza część sumy regularyzuje enkoder tak, żeby zadany przez niego rozkład był jak najbliższy $p(z)$. W dalszych pracach korzystających z VAE błąd rekonstrukcji zaczęto wymieniać na bardziej skomplikowane funkcje dostosowane do konkretnej dziedziny, odchodząc od ścisłego sformułowania estymatora.
 
 \subsection{GANy}
 

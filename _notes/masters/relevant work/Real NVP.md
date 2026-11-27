@@ -3,7 +3,7 @@ https://arxiv.org/pdf/1605.08803
 
 continuation of [NICE](https://arxiv.org/abs/1410.8516)
 
-- [ ] why Real NVP, not other flows? [frozen:: true]
+- [x] why Real NVP, not other flows? [frozen:: true]
     - masked autoregressive flows are allegedly the more natural choice
 ## so
 the idea is to have a class of _bijective_ generative models from some latent space to the target distribution, which would allow maximum likelihood learning without discriminator networks (GANs) or approximate posterior inference (VAEs)
