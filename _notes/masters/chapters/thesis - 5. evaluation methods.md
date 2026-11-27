@@ -51,12 +51,12 @@ Autorzy CLAP udostępnili kilka już wytrenowanych modeli, każdy na innej kombi
 \end{enumerate}
 Odległość \textit{Frechet distance} między dwoma zbiorami jest zdefiniowana jako
 $$\mathbf{F}(\mathcal{N}_r, \mathcal{N}_e) = \|\mu_r - \mu_e\|^2 + tr\left(\Sigma_r + \Sigma_e - 2\sqrt{\Sigma_r \Sigma_e}\right)$$
-gdzie \texttt{r} oznacza parametry zbioru referencyjnego, \texttt{e} ewaluacyjnego a \texttt{tr} to ślad macierzy. (TODO: FAD też mierzy różnorodność)
+gdzie \texttt{r} oznacza parametry zbioru referencyjnego, \texttt{e} ewaluacyjnego a \texttt{tr} to ślad macierzy. W praktyce, tak zdefiniowana metryka implicite mierzy również różnorodność danego zbioru, co należy mieć na uwadzę interpretując wyniki.
 
-Tak zdefiniowana metryka ma kilka słabych punktów:
+FAD ma kilka słabych punktów:
 \begin{enumerate}
     \setlength\itemsep{0em}
-    \item zbiór referencyjny - FAD zakłada, że przykłady wysokiej jakości to takie bliskie zbiorowi referencyjnemu, przez co może źle ocenić przykłady odległe, a mimo to jakościowe;
+    \item zbiór referencyjny - zakłada, że przykłady wysokiej jakości to takie bliskie zbiorowi referencyjnemu, przez co może źle ocenić przykłady odległe, a mimo to jakościowe;
     \item rozmiar zbioru - ocena jakości jest zależna od rozmiaru ewaluowanego zbioru;
     \item gaussowskie założenie - podobieństwo zbiorów może być przekłamane, jeśli embeddingi nie są wcale rozłożone wedle
 \end{enumerate}

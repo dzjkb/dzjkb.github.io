@@ -184,7 +184,7 @@ and then, to sample from the prior - take `z ~ N(0, 1)` and pass through the inv
 - [x] FloWaveNet (2019)
 - [x] [WaveFlow (2020)](https://arxiv.org/abs/1912.01219)
 - [ ] [Masked Autoregressive Flow for Density Estimation](https://arxiv.org/abs/1705.07057) [frozen:: true]
-- [ ] [KALL-E: Autoregressive Speech Synthesis with Next-Distribution Prediction](https://arxiv.org/pdf/2412.16846) [frozen:: true]
+- [x] [KALL-E: Autoregressive Speech Synthesis with Next-Distribution Prediction](https://arxiv.org/pdf/2412.16846) [frozen:: true]
 ## implementations
 https://github.com/VincentStimper/normalizing-flows
 ![[Pasted image 20251220155102.png]]

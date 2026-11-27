@@ -70,9 +70,16 @@ https://arxiv.org/pdf/1912.02762v2
 
 \section*{Cyfrowa reprezentacja dźwięku}
 
-Fala dźwiękowa, będąc ciągłym, analogowym fenomenem, nie daje się w idealny sposób reprezentować cyfrowo. Matematycznie rzecz biorąc, jest to zmiana ciśnienia w czasie, czyli funkcja z liczby rzeczywistej w liczbę rzeczywistą. Cyfrowy zapis wymaga kwantyzacji obu tych wielkości, co w wymiarze czasu dzieje się poprzez \textit{próbkowanie} sygnału w stałych odstępach czasu, a w drugim poprzez kwantyzację próbkowanej wartości z ustaloną rozdzielczością. Przykładem takiego zapisu może być format \textbf{WAV}, 16-bitowy w 44.1 kHz. Jest to nieskompresowany zapis fali w postaci 44100 próbek na sekundę, gdzie każda próbka jest 16-bitową wartością, a kwantyzacja rozkłada wszystkie możliwe wartości w równych odstępach. (TODO obrazek ten z wavenetu może) Grafika nr ??? schematycznie obrazuje taki zapis.
+Fala dźwiękowa, będąc ciągłym, analogowym fenomenem, nie daje się w idealny sposób reprezentować cyfrowo. Matematycznie rzecz biorąc, jest to zmiana ciśnienia w czasie, czyli funkcja z liczby rzeczywistej w liczbę rzeczywistą. Cyfrowy zapis wymaga kwantyzacji obu tych wielkości, co w wymiarze czasu dzieje się poprzez \textit{próbkowanie} sygnału w stałych odstępach czasu, a w drugim poprzez kwantyzację próbkowanej wartości z ustaloną rozdzielczością. Przykładem takiego zapisu może być format \textbf{WAV}, 16-bitowy w 44.1 kHz. Jest to nieskompresowany zapis fali w postaci 44100 próbek na sekundę, gdzie każda próbka jest 16-bitową wartością, a kwantyzacja rozkłada wszystkie możliwe wartości w równych odstępach. Grafika~\ref{fig:sampling} obrazuje taki zapis.
 
-Próbkowanie sygnału, w ogólności, jest operacją stratną. Zgodnie jednak z twierdzeniem Nyquista-Shannona, przy danej częstotliwości próbkowania $\mathcal{f}$, sygnały o maksymalnej częstotliwości składowej mniejszej niż $f / 2$ da się z takiej reprezentacji idealnie z powrotem zrekonstruować. Częstotliwości ponad tą granicą po próbkowaniu dają w wyniku identyczną reprezentację co pewne częstotliwości poniżej granicy, co uniemożliwia jednoznaczne odwrócenie operacji (fenomen ten nazywa się \textit{aliasingiem} \footnote{https://pl.wikipedia.org/wiki/Aliasing_(przetwarzanie_sygna%C5%82%C3%B3w)}). Patrząc na to w drugą stronę, dla sygnału z maksymalną częstotliwością składową $b$, jego bezstratny zapis cyfrowy wymaga częstotliwości próbkowania równej lub większej niż $2b$. W przypadku dźwięku, ludzki zakres słyszalności wynosi 20Hz - 20kHz, przez co jego bezstratne próbkowanie wymaga częstotliwości większej niż 40kHz. Z przyczyn historycznych powszechnie używaną częstotliwością w cyfrowym zapisie dźwięku, jak na przykład na płytach CD, jest 44.1kHz. Obecnie używa się również często 48kHz, a w kontekście studyjnym zdarza się nawet 96kHz lub 192kHz, co redukuje ryzyko artefaktów związanych z 
+\begin{figure}[t]
+  \centering
+  \includegraphics{figures/fig_sampling.pdf}
+  \caption{Ilustracja próbkowania - wartość fali jest zczytywana w równych odstępach czasu.}
+  \label{fig:sampling}
+\end{figure}
+
+Próbkowanie sygnału, w ogólności, jest operacją stratną. Zgodnie jednak z twierdzeniem Nyquista-Shannona, przy danej częstotliwości próbkowania $\mathcal{f}$, sygnały o maksymalnej częstotliwości składowej mniejszej niż $f / 2$ da się z takiej reprezentacji idealnie z powrotem zrekonstruować (częstotliwość $f/2$ nazywa się \textit{częstotliwością Nyquista}). Częstotliwości ponad tą granicą po próbkowaniu dają w wyniku identyczną reprezentację co pewne częstotliwości poniżej granicy, co uniemożliwia jednoznaczne odwrócenie operacji (fenomen ten nazywa się \textit{aliasingiem} \footnote{https://pl.wikipedia.org/wiki/Aliasing_(przetwarzanie_sygna%C5%82%C3%B3w)}). Patrząc na to w drugą stronę, dla sygnału z maksymalną częstotliwością składową $b$, jego bezstratny zapis cyfrowy wymaga częstotliwości próbkowania równej lub większej niż $2b$. W przypadku dźwięku, ludzki zakres słyszalności wynosi 20Hz - 20kHz, przez co jego bezstratne próbkowanie wymaga częstotliwości większej niż 40kHz. Z przyczyn historycznych powszechnie używaną częstotliwością w cyfrowym zapisie dźwięku, jak na przykład na płytach CD, jest 44.1kHz. Obecnie używa się również często 48kHz, a w kontekście studyjnym zdarza się nawet 96kHz lub 192kHz, co redukuje ryzyko artefaktów związanych z aliasingiem.
 
 Współczesne formaty zapisu dźwięku, takie jak \textit{flac} czy \textit{mp3}, wybiegają daleko poza zwykłe zapisywanie próbek. Korzystając z różnych metod kompresji zapisują praktycznie nierozróżnialny od oryginału dźwięk w kilkukrotnie lżejszych plikach.
 
@@ -98,12 +105,18 @@ Filtry PQMF to bank $N$ filtrów dolno-przepustowych z modulacją kosinusową, 
     \item aliasing graniczących ze sobą filtrów znosił się nawzajem, oraz
     \item charakterystyka filtrów graniczących ze sobą, w miejscach gdzie się nakładają, sumował się do wejściowej amplitudy,
 \end{itemize}
-przez co jedyne artefakty które zostają po powrotnej syntezie sygnału to aliasing niegraniczących ze sobą pasm, których amplituda zależy od stopnia tłumienia składowych filtrów. W przypadku Multiband-MelGAN jest to -70db, a w RAVE oraz w tej pracy użyte jest -100db, co znaczy, że w praktyce artefakty te nie są słyszalne. Wykres (TODO wykresik) przedstawia charakterystykę częstotliwościową zestawu 4 filtrów PQMF z Multiband-MelGAN.
-![[Pasted image 20261119161023.png]]
+przez co jedyne artefakty które zostają po powrotnej syntezie sygnału to aliasing niegraniczących ze sobą pasm, których amplituda zależy od stopnia tłumienia składowych filtrów. W przypadku Multiband-MelGAN jest to -70db, a w RAVE oraz w tej pracy użyte jest -100db, co znaczy, że w praktyce artefakty te nie są słyszalne. Wykres~\ref{pqmf-bands} przedstawia charakterystykę częstotliwościową zestawu 4 filtrów PQMF z Multiband-MelGAN.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics{figures/fig_pqmf_bands.pdf}
+  \caption{Charakterystyka częstotliwościowa zestawu filtrów PQMF.}
+  \label{fig:pqmf-bands}
+\end{figure}
 
 \section*{Deskryptory dźwięku - essentia}
 
-Zestawy danych użyte w tej pracy mają bardzo ograniczony zestaw metadanych przypisanych do każdego z przykładów. Do oznaczenia danych nie trzeba używać jednak klasyfikatorów czy ludzkich, subiektywnych ocen - w dziedzinie przetwarzania sygnału istnieje wiele opracowanych algorytmów analizujących dźwięk pod kątem na przykład intensywności, złożoności czy harmoniczności. Paczka \textit{essentia} \footnote{https://essentia.upf.edu} implementuje wiele z nich, pozwalając na obliczenie dla jakiegoś fragmetu dźwięku cech takich jak:
+Zestawy danych użyte w tej pracy mają bardzo ograniczony zestaw metadanych przypisanych do każdego z przykładów. Do oznaczenia danych nie trzeba używać jednak klasyfikatorów czy ludzkich, subiektywnych ocen - w dziedzinie przetwarzania sygnału istnieje wiele opracowanych algorytmów analizujących dźwięk pod kątem na przykład intensywności, złożoności czy harmoniczności. Paczka \texttt{essentia} \footnote{https://essentia.upf.edu} implementuje wiele z nich, pozwalając na obliczenie dla jakiegoś fragmetu dźwięku cech takich jak:
 \begin{itemize}
     \setlength\itemsep{0em}
     \item złożoność dynamiczna,
@@ -114,11 +127,11 @@ Zestawy danych użyte w tej pracy mają bardzo ograniczony zestaw metadanych prz
     \item stosunek niskich/wysokich częstotliwości.
 \end{itemize}
 
-(TODO: jeszcze coś?)
+Algorytmy działające na spektrogramach, nie na surowej fali, zostały policzone w oknach rozmiaru 2048 z krokiem przesunięcia 1024. Pozwala to na wyciągnięcie dodatkowych cech jak zmienność częstotliwości, jasności czy harmoniczności w czasie. 
 
 \section*{Deep learning i modele generatywne}
 
-\textit{Deep Learning} to dział uczenia maszynowego zajmujący się uczeniem głębokich sieci neuronowych. Zgodnie z twierdzeniem o uniwersalnej aproksymowalności (TODO przypis p194 mlp), sieć o jednej warstwie ukrytej jest w stanie przybliżyć dowolną funkcję borelowsko mierzalną z dowolnie małym błędem, pod warunkiem, że ma wystarczającą liczbę ukrytych neuronów. W praktyce badania wykazały, że sieci głębsze (więcej warstw), nie szersze (więcej neuronów w warstwie), są w stanie przy tej samej objętości osiągać lepsze przybliżenia w wielu różnych dziedzinach. Koncepcyjnie rzecz biorąc, sieć o większej ilości warstw reprezentuje założenie, że szukana aproksymacja będzie składała się z wielu kroków budujących na sobie. Wyniki w dziedzinie przetwarzania obrazu czy języka naturalnego pokazują, że głębokie sieci na przestrzeni swoich warstw rzeczywiście budują coraz bardziej złożone reprezentacje wejścia, budując abstrakcyjne koncepcje z bardziej podstawowych cech. (TODO transformer circuits? that blogpost work illustrating convnets?)
+\textit{Deep Learning} to dział uczenia maszynowego zajmujący się uczeniem głębokich sieci neuronowych. Zgodnie z twierdzeniem o uniwersalnej aproksymowalności (TODO przypis p194 mlp), sieć o jednej warstwie ukrytej jest w stanie przybliżyć dowolną funkcję borelowsko mierzalną z dowolnie małym błędem, pod warunkiem, że ma wystarczającą liczbę ukrytych neuronów. W praktyce badania wykazały, że sieci głębsze (więcej warstw), nie szersze (więcej neuronów w warstwie), są w stanie przy tej samej objętości osiągać lepsze przybliżenia w wielu różnych dziedzinach. Koncepcyjnie rzecz biorąc, sieć o większej ilości warstw reprezentuje założenie, że szukana aproksymacja będzie składała się z wielu kroków budujących na sobie. Wyniki w dziedzinie przetwarzania obrazu czy języka naturalnego pokazują, że głębokie sieci na przestrzeni swoich warstw rzeczywiście budują coraz bardziej złożone reprezentacje wejścia, budując abstrakcyjne koncepcje z bardziej podstawowych cech. (TODO przypis - transformer circuits? that blogpost work illustrating convnets?)
 
 W klasycznym ujęciu, sieci neuronowe uczą się funkcji $Y = f(X)$ przybliżającej rozkład warunkowy $P(Y \mid X)$, gdzie $X$ to dane na wejściu do sieci (na przykład obrazki) a $Y$ to wyjście (na przykład kategoria obiektu na obrazku). Dział modeli generatywnych zajmuje się innym problemem: modelowaniem samego rozkładu $P(X)$ (lub łącznego $P(X, Y)$). W przeciwieństwie do rozkładu warunkowego, pozwala to na generowanie syntetycznych przykładów losując $x \sim P(X)$, skąd bierze się ich nazwa. Paradygmat generatywny ma szeroki zakres zastosowań, takich jak na przykład:
 \begin{itemize}
@@ -151,7 +164,7 @@ O takim modelu można myśleć jak o sieci bayesowskiej $z \to x$, gdzie $p(x) =
 \end{enumerate}
 W przypadu jednak działania na danych typu dźwięk czy obraz i na rozkładach wyrażanych przez sieci neuronowe, pierwszy krok jest często niemożliwy do zrealizowania.
 
-W swojej pracy \textit{Auto-Encoding Variational Bayes}, autorzy wprowadzili algorytm \textit{Stochastic Gradient Variational Bayes} (SVGB) do optymalizacji parametrów w takiej sieci w przypadku, gdy:
+W swojej pracy \textit{Auto-Encoding Variational Bayes}, wprowadzającej koncept VAE, autorzy wprowadzili algorytm \textit{Stochastic Gradient Variational Bayes} (SVGB) do optymalizacji parametrów w takiej sieci w przypadku, gdy:
 \begin{enumerate}
     \setlength\itemsep{0em}
     \item obliczenie $p(z \mid x)$ jest niemożliwe, oraz
@@ -165,9 +178,7 @@ $$
 $$
 gdzie $z_l = g_{\phi}(\epsilon_l, \, x)$ i $\epsilon_l \sim p(\epsilon)$. Ponieważ $g_{\phi}(\epsilon_l, \, x)$ jest różniczkowalne, można go optymalizować standardowymi metodami spadku wzdłuż gradientu. W praktyce $L$ może być równe 1 jeśli liczba przykładów, na których SVGB jest estymowane jest wystarczająco duża - autorzy podają przykładowo 100. 
 
-W kontekście auto-enkoderów, rozkłady $q_{\phi}(z \mid x)$ i $p(x \mid z)$ są implementowane przez sieci neuronowe - odpowiednio enkoder i dekoder - a prior $p(z)$ jest zwykle ustalonym rozkładem, takim jak na przykład $\mathcal{N}(0, \, 1)$. Druga część sumy w estymatorze SVGB, $\log p(x \mid z_l)$, odpowiada \textit{błędowi rekonstrukcji} danego przykładu $x$ po przejściu przez enkoder i dekoder, zaś pierwsza część sumy regularyzuje enkoder tak, żeby zadany przez niego rozkład był jak najbliższy $p(z)$.
-
-(TODO i co dalej? współcześnie - podmiana reconstruction, nie do końca ELBO? własności VAE? mode covering, zastosowania? historia może)
+W kontekście auto-enkoderów, rozkłady $q_{\phi}(z \mid x)$ i $p(x \mid z)$ są implementowane przez sieci neuronowe - odpowiednio enkoder i dekoder - a prior $p(z)$ jest zwykle ustalonym rozkładem, takim jak $\mathcal{N}(0, \, 1)$. Druga część sumy w estymatorze SVGB, $\log p(x \mid z_l)$, odpowiada \textit{błędowi rekonstrukcji} danego przykładu $x$ po przejściu przez enkoder i dekoder, zaś pierwsza część sumy regularyzuje enkoder tak, żeby zadany przez niego rozkład był jak najbliższy $p(z)$. W dalszych pracach korzystających z VAE błąd rekonstrukcji zaczęto wymieniać na bardziej skomplikowane funkcje dostosowane do konkretnej dziedziny, odchodząc od ścisłego sformułowania estymatora.
 
 \subsection{GANy}
 
@@ -196,8 +207,28 @@ Kolejną warstwą abstrakcji zbudowaną na PyTorch jest paczka Lightning. Idzie
 
 \textit{Normalizing Flows} (NF) to metoda elastycznego konstruowania rozkładów prawdopodobieństwa poprzez serię odwracalnych, różniczkowalnych transformacji. Dla transformacji $T$ i zmiennej losowej $u \sim p(u)$ z jakiegoś znanego rozkładu (przeważnie $\mathcal{N}(0, \, 1)$), wynikowy rozkład jest zdefiniowany przez $$x = T(u).$$Prawdopodobieństwo danego $x$ jest wtedy równe $$p(x) = p_u(u) \, |\text{det} J_T(u)|^{-1}, \;\;\; \text{gdzie} \;\;\; u = T^{-1}(x).$$Dowolność transformacji $T$ pozwala wyrazić w ten sposób bardzo bogatą klasę rozkładów, przez co NF naturalnie pasują do zadania przybliżania nieznanych, wysoce złożonych rozkładów. Jest ona zwykle złożona z wielu mniejszych kroków (stąd nazwa \textit{flows}), a jej różniczkowalność pozwala na rozwiązywanie problemu przybliżenia poprzez estymację największej wiarygodności z optymalizacją gradientową. Jest to dokładnie ten sam problem, który rozwiązują modele generatywne, przez co o NF można myśleć jak o kolejnej ogólnej klasie modeli z tej rodziny.
 
-Istotnym kierunkiem badań dla \textit{Normalizing Flows} było znalezienie sposobów na zwiększenie ekspresywności $T$. Praca \textit{Non-linear Independent Component Estimation} (NICE) z 2015 roku opracowała sposób na zdefiniowanie transformacji za pomocą dowolnych sieci neuronowych, które same w sobie nie są odwracalne, pod nazwą \textit{coupling layers}. Celem było stworzenie odwracalnej, różniczkowalnej transformacji parametryzowanej przez dowolną sieć, której wyznacznik macierzy Jacobiego $|\text{det}J_T(u)|^{-1}$ jest łatwo obliczalny w praktyce. Na schemacie (TODO schemat) przedstawiona jest jedna taka warstwa stosująca \textit{additive coupling}. Ponieważ $y_2 = x_2$, operacja $y_1 = x_1 + m(x_2)$ jest trywialnie odwracalna, dając $x_1 = y_1 - m(y_2)$. Dodatkowo, wyznacznik macierzy Jacobiego dla tak zdefiniowanej transformacji jest zawsze równy 1. Aplikując tę architekturę do problemu generowania obrazków, autorzy wykazali, że jest ona w stanie osiągać wyniki porównywalne z innymi generatywnymi metodami na skomplikowanych rozkładach prawdziwych danych.
+Istotnym kierunkiem badań dla \textit{Normalizing Flows} było znalezienie sposobów na zwiększenie ekspresywności $T$. Praca \textit{Non-linear Independent Component Estimation} (NICE) z 2015 roku opracowała sposób na zdefiniowanie transformacji za pomocą dowolnych sieci neuronowych, które same w sobie nie są odwracalne, pod nazwą \textit{coupling layers}. Celem było stworzenie odwracalnej, różniczkowalnej transformacji parametryzowanej przez dowolną sieć, której wyznacznik macierzy Jacobiego $|\text{det}J_T(u)|^{-1}$ jest łatwo obliczalny w praktyce. Na schemacie~\ref{fig:coupling} przedstawiona jest jedna taka warstwa stosująca \textit{additive coupling}. Ponieważ $y_2 = x_2$, operacja $y_1 = x_1 + m(x_2)$ jest trywialnie odwracalna, dając $x_1 = y_1 - m(y_2)$. Dodatkowo, wyznacznik macierzy Jacobiego dla tak zdefiniowanej transformacji jest zawsze równy 1. Aplikując tę architekturę do problemu generowania obrazków, autorzy wykazali, że jest ona w stanie osiągać wyniki porównywalne z innymi generatywnymi metodami na skomplikowanych rozkładach prawdziwych danych.
 
-Praca RealNVP z 2017 roku pociągnęła ten pomysł dalej, wprowadzając szereg usprawnień pozwalających na głębsze architektury NF dostosowane do generowania obrazu. (TODO troche więcej o tym probs, skoro używam defaultowej architektury)
+\begin{figure}[t]
+  \centering
+  \includegraphics{figures/fig_coupling_layer.pdf}
+  \caption{Warstwa \textit{additive coupling} - transformacja $m$ może być dowolną siecią neuronową.}
+  \label{fig:coupling}
+\end{figure}
+
+Praca RealNVP z 2017 roku pociągnęła ten pomysł dalej, wprowadzając szereg usprawnień pozwalających na głębsze architektury NF dostosowane do generowania obrazu. Najważniejsze modyfikacje to:
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item \textbf{skalowanie}: Warstwy w NICE zachowywały objętość, co ogarniczało ich ekspresywność. RealNVP wprowadziło ich uogólnienie w postaci \textit{affine coupling layer}, gdzie $y_1 = x_1 \odot \text{exp}(s(x_2)) + t(x_2)$, gdzie $\odot$ to iloczyn elementów po pozycjach, a $s$ i $t$ to sieci neuronowe odpowiadające odpowiednio za skalowanie i translację wejścia.
+    \item \textbf{alternatywny podział wejścia}: Podział na $x_1$ i $x_2$ był tworzony poprzez dostosowaną specjalnie do obrazu maskę w kształcie szachownicy, co pozwalało na jednorodne przetwarzanie wejścia przez kolejne warstwy.
+    \item \textbf{modyfikacja wymiarowości}: Po niektórych warstwach wymiarowość wejścia była zmniejszana o połowę w wysokości/szerokości i zwiększana czterokrotnie w kanałach, przez co sieci mogły nauczyć się bardziej ogólnych cech.
+\end{itemize}
+Dodatkowo, do sieci konwolucyjnych $s$ i $t$ dodana została normalizacja \textit{batch normalization}, co według autorów umożliwiło wytrenowanie głębszej architektury.
 
 \section*{SeFa}
+
+\textit{Semantic Factorization} (SeFa) to metoda pozwalajaca na ekstrakcję istotnych kierunków w przestrzeni ukrytej GANów, zaproponowana w pracy \textit{Closed-Form Factorization of Latent Semantics in GANs} z 2021 roku. Opiera się na obserwacji, że dużo informacji o semantyce przestrzeni ukrytej znajduje się już w pierwszej warstwie wytrenowanego modelu. Niech $z \sim \mathcal{N}(0, \, 1)$ to wektor szumu, a pierwsza warstwa będzie dana przez
+$$G_1(z) = Az + b \, .$$
+Manipulacja wektorem szumu w danym kierunku $n$ z wagą $\alpha$ oznacza obliczenie $z' = z + \alpha n$. Pierwsza warstwa daje wtedy
+$$G_1(z') = Az + b + \alpha An = G_1(z) + \alpha An \, .$$
+Oznacza to, że modyfikacja przykładu w kierunku $n$ jest niezależna od pierwszej warstwy - może zostać zaaplikowana po niej. Kierunek tej modyfikacji będzie zależał wyłącznie od $A$, co sugeruje, że istotność poszczególnych kierunków powinna być zawarta w $A$. SeFa wyciąga je poprzez znalezienie $n$ maksymalizujących $\| An \|_2^2$. Autorzy pokazują, że są one równe wektorom własnym macierzy $A^TA$. Poprzez porównania z innymi metodami opierającymi się w jakiś sposób na danych, autorzy pokazują, że znalezione w ten sposób kierunki są precyzyjniejsze i bardziej interpretowalne niż najlepsze dotychczasowe rozwiązania.

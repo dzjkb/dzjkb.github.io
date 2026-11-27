@@ -1,3 +1,15 @@
 what was achieved? what wasn't?
 further work
+- tuning parameters for sureeee with more compute etc
+- exploring the influence of design decisions on the latent space and maybe some methods that could improve it
+- opening the datasets
 VST plugin
+
+---
+# tekst
+
+W tej pracy zaproponowana została nowatorska architektura, bazująca na VAE, do generowania krótkich klipów dźwiękowych (sampli) dostosowana pod użycie przy produkcji muzyki. Osiąga ona wysoką jakość dźwięku porównywalną z innymi pracami w tej dziedzinie, które są już używane produkcyjnie w branży muzycznej. Za pomocą dodatkowego rozkładu prior na bazie \textit{Normalizing Flows}, uzyskuje realistyczne wyniki również przy bezwarunkowej generacji. Użycie \textit{Normalizing Flows} jako dodatkowej warstwy do enkodera nie wykazało żadnej poprawy jakości rozwiązania. Poprzez kompresję do nisko wymiarowej przestrzeni, jest w stanie wyekstrahować istotne, globalne i interpretowalne cechy w sposób umożliwiający ich kontrolę przy generacji nowych przykładów. W porównaniu z obecnie używanymi rozwiązaniami, cech tych jest więcej oraz mają wyraźniejszą interpretację. Istotne kierunki, w przypadku proponowanego modelu, są jednak powiązane z wieloma różnymi cechami naraz - przyszłym obszarem badań mogłoby być opracowanie metod, które rozdzieliły by różne percepcyjnie cechy na osobne kierunki w przestrzeni ukrytej.
+
+W ramach tej pracy powstały również trzy zestawy danych stworzone stricte pod generatywne modele dźwięku operujące na krótkich fragmentach ustalonej długości. Jako, że brakuje otwartych zestawów w tej dziedzinie, mogłyby one zostać opublikowane i posłużyć za podstawę do przyszłych badań w tym obszarze.
+
+Modele w tej pracy zostały wytrenowane z ograniczonymi zasobami obliczeniowymi. Dalsza praca w tym kierunku mogłaby obszerniej zbadać wybory architekturalne i wartości hiperparametrów, próbując wytrenować jeszcze realistycznej brzmiące sieci. W szczególności istotne mogłoby się okazać użycie nowej funkcji aktywacji \textit{snake} z pracy RVQGAN, która z powodu znaczącego dodatkowego zużycia pamięci nie była wzięta pod uwagę w tej pracy. Wybory te mogłyby również wpłynąć na strukturę przestrzeni ukrytej, którą możnaby dogłębniej zbadać pod kątem ekstrakcji znaczących kierunków. Oprócz kwestii ich korelacji z deskryptorami, w praktycznym wykorzystaniu istotna jest siła tych zmian, co jest kolejnym obszarem który możnaby zmierzyć. Do kontroli cech możnaby również zastosować jedną z wielu metod korzystających w jakiś sposób z zewnętrznego warunkowania dekodera, co jest obecnie równoległym kierunkiem badań w tej dziedzinie. Kolejnym krokiem jest również stworzenie wtyczki VST, która umożliwiałaby wykorzystanie nauczonego modelu w środowisku do produkcji muzyki oraz trenowanie na kolejnych zestawach danych dobranych pod specyficzne muzyczne zastosowania. Pokazano w tej pracy jednak, że zaproponowana modyfikacja architektury jest obiecującym krokiem w stronę instrumentów muzycznych bazujących na sieciach neuronowych.
